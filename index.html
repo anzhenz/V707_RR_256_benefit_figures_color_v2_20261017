@@ -1,0 +1,786 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ECG 全部256例优势波形图</title><style>
+*{box-sizing:border-box}body{margin:0;background:#f3f6f8;color:#183244;font:15px/1.6 system-ui,"Microsoft YaHei",sans-serif}
+header,main{max-width:1500px;margin:auto;padding:24px}header{background:white;border-bottom:1px solid #d9e1e7}h1{margin:0;font-size:28px}
+.meta{color:#627787}.controls{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0}input,select{padding:9px;border:1px solid #c4d0da;border-radius:5px;background:white}
+input{min-width:260px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(440px,1fr));gap:20px}article{background:white;border:1px solid #dae3e9;border-radius:8px;padding:16px}
+h3{font-size:16px;margin:0 0 5px}.tag{font-size:13px;color:#526a7d}img{width:100%;height:auto;display:block}p{margin:10px 0 0;font-size:14px}
+details{background:white;padding:12px 16px;margin-bottom:18px}table{border-collapse:collapse}td,th{padding:6px 15px;border-bottom:1px solid #e0e7ec;text-align:left}
+a{color:#1e62a1}article[hidden]{display:none}@media(max-width:500px){.grid{grid-template-columns:1fr}header,main{padding:15px}}
+</style><header><h1>ECG 全部256例FP减少案例</h1><div class="meta">模型直接删除227 · RR直接删除23 · FP重新匹配为TP 6</div>
+<p>红色五角星：当前复核AP（底层FP）；橙色倒三角与点线：全部原始AP；蓝色上三角与虚线：专家参考标注。点击图片查看原图。</p>
+<p><a href="README.md">统计与图例说明</a> · <a href="case_descriptions.csv">全部逐例说明CSV</a> · <a href="report_captions.md">5个报告代表案例</a></p>
+<p>FP净减少256，同时新增FN 80。6例匹配变化没有删除当前AP；2例容差内候选删除伴随对应专家事件新增FN，已单独标记。</p></header><main>
+<div class="controls"><select id="type"><option value="">全部处理阶段</option><option value="MODEL_FP_REMOVED">优势｜模型删除底层FP</option><option value="RR_FP_REMOVED">优势｜RR规则删除底层FP</option><option value="FP_TO_TP_REASSIGNED">优势｜FP重新匹配为TP（候选保留）</option></select><select id="record"><option value="">全部记录</option><option value="105">105</option><option value="111">111</option><option value="117">117</option><option value="121">121</option><option value="200">200</option><option value="203">203</option><option value="214">214</option><option value="222">222</option><option value="228">228</option><option value="233">233</option></select>
+<select id="relation"><option value="">全部匹配位置关系</option><option value="EARLY">最近专家标注前超过150ms</option><option value="LATE">最近专家标注后超过150ms</option><option value="DUP_TP">容差内重复候选，专家事件仍检出</option><option value="DUP_FN">容差内重复候选，专家事件最终漏检</option><option value="REASSIGNED">FP重新匹配为TP</option></select><input id="query" placeholder="搜索AP编号、规则或说明"><span id="count"></span></div>
+<section class="grid"><article data-type="RR_FP_REMOVED" data-record="105" data-relation="EARLY">
+<h3>MITDB_105_BENEFIT_ap00873</h3><div class="tag">优势｜RR规则删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/RR_FP_REMOVED/105/MITDB_105_BENEFIT_ap00873.png" target="_blank"><img loading="lazy" src="images/RR_FP_REMOVED/105/MITDB_105_BENEFIT_ap00873.png" alt="MITDB_105_BENEFIT_ap00873"></a><p>当前AP在底层为FP，位于最近专家参考标注前198.0ms，超出±150ms评价容差。模型以p_real=0.3984保留，随后Rule 1删除；RR=511.0ms，参考RR=725.8ms，比值=0.704，历史稳定=1、cooldown=0。</p></article>
+<article data-type="RR_FP_REMOVED" data-record="105" data-relation="EARLY">
+<h3>MITDB_105_BENEFIT_ap01205</h3><div class="tag">优势｜RR规则删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/RR_FP_REMOVED/105/MITDB_105_BENEFIT_ap01205.png" target="_blank"><img loading="lazy" src="images/RR_FP_REMOVED/105/MITDB_105_BENEFIT_ap01205.png" alt="MITDB_105_BENEFIT_ap01205"></a><p>当前AP在底层为FP，位于最近专家参考标注前173.5ms，超出±150ms评价容差。模型以p_real=0.3848保留，随后Rule 1删除；RR=508.5ms，参考RR=695.0ms，比值=0.732，历史稳定=1、cooldown=0。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="105" data-relation="EARLY">
+<h3>MITDB_105_BENEFIT_ap01206</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/105/MITDB_105_BENEFIT_ap01206.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/105/MITDB_105_BENEFIT_ap01206.png" alt="MITDB_105_BENEFIT_ap01206"></a><p>当前AP在底层为FP，位于最近专家参考标注前250.5ms，超出±150ms评价容差。模型p_real=0.2734、p_noise=0.7266，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="105" data-relation="EARLY">
+<h3>MITDB_105_BENEFIT_ap01476</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/105/MITDB_105_BENEFIT_ap01476.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/105/MITDB_105_BENEFIT_ap01476.png" alt="MITDB_105_BENEFIT_ap01476"></a><p>当前AP在底层为FP，位于最近专家参考标注前293.5ms，超出±150ms评价容差。模型p_real=0.2334、p_noise=0.7666，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="RR_FP_REMOVED" data-record="105" data-relation="LATE">
+<h3>MITDB_105_BENEFIT_ap01664</h3><div class="tag">优势｜RR规则删除底层FP · 最近专家标注后超过150ms</div>
+<a href="images/RR_FP_REMOVED/105/MITDB_105_BENEFIT_ap01664.png" target="_blank"><img loading="lazy" src="images/RR_FP_REMOVED/105/MITDB_105_BENEFIT_ap01664.png" alt="MITDB_105_BENEFIT_ap01664"></a><p>当前AP在底层为FP，位于最近专家参考标注后287.0ms，超出±150ms评价容差。模型以p_real=0.3945保留，随后Rule 1删除；RR=401.5ms，参考RR=686.8ms，比值=0.585，历史稳定=1、cooldown=0。</p></article>
+<article data-type="RR_FP_REMOVED" data-record="105" data-relation="EARLY">
+<h3>MITDB_105_BENEFIT_ap01666</h3><div class="tag">优势｜RR规则删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/RR_FP_REMOVED/105/MITDB_105_BENEFIT_ap01666.png" target="_blank"><img loading="lazy" src="images/RR_FP_REMOVED/105/MITDB_105_BENEFIT_ap01666.png" alt="MITDB_105_BENEFIT_ap01666"></a><p>当前AP在底层为FP，位于最近专家参考标注前169.0ms，超出±150ms评价容差。模型以p_real=0.3320保留，随后Rule 1删除；RR=498.5ms，参考RR=686.8ms，比值=0.726，历史稳定=1、cooldown=0。</p></article>
+<article data-type="RR_FP_REMOVED" data-record="105" data-relation="EARLY">
+<h3>MITDB_105_BENEFIT_ap01670</h3><div class="tag">优势｜RR规则删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/RR_FP_REMOVED/105/MITDB_105_BENEFIT_ap01670.png" target="_blank"><img loading="lazy" src="images/RR_FP_REMOVED/105/MITDB_105_BENEFIT_ap01670.png" alt="MITDB_105_BENEFIT_ap01670"></a><p>当前AP在底层为FP，位于最近专家参考标注前212.0ms，超出±150ms评价容差。模型以p_real=0.3867保留，随后Rule 1删除；RR=472.0ms，参考RR=680.8ms，比值=0.693，历史稳定=1、cooldown=0。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="105" data-relation="EARLY">
+<h3>MITDB_105_BENEFIT_ap01688</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/105/MITDB_105_BENEFIT_ap01688.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/105/MITDB_105_BENEFIT_ap01688.png" alt="MITDB_105_BENEFIT_ap01688"></a><p>当前AP在底层为FP，位于最近专家参考标注前214.5ms，超出±150ms评价容差。模型p_real=0.1826、p_noise=0.8174，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="105" data-relation="EARLY">
+<h3>MITDB_105_BENEFIT_ap01692</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/105/MITDB_105_BENEFIT_ap01692.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/105/MITDB_105_BENEFIT_ap01692.png" alt="MITDB_105_BENEFIT_ap01692"></a><p>当前AP在底层为FP，位于最近专家参考标注前288.5ms，超出±150ms评价容差。模型p_real=0.2236、p_noise=0.7764，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="105" data-relation="LATE">
+<h3>MITDB_105_BENEFIT_ap01701</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注后超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/105/MITDB_105_BENEFIT_ap01701.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/105/MITDB_105_BENEFIT_ap01701.png" alt="MITDB_105_BENEFIT_ap01701"></a><p>当前AP在底层为FP，位于最近专家参考标注后288.5ms，超出±150ms评价容差。模型p_real=0.2188、p_noise=0.7812，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="FP_TO_TP_REASSIGNED" data-record="105" data-relation="REASSIGNED">
+<h3>MITDB_105_BENEFIT_ap01704</h3><div class="tag">优势｜FP重新匹配为TP（候选保留） · FP重新匹配为TP</div>
+<a href="images/FP_TO_TP_REASSIGNED/105/MITDB_105_BENEFIT_ap01704.png" target="_blank"><img loading="lazy" src="images/FP_TO_TP_REASSIGNED/105/MITDB_105_BENEFIT_ap01704.png" alt="MITDB_105_BENEFIT_ap01704"></a><p>当前AP在底层被评价为FP，但未被模型或RR删除；原匹配AP#1703被模型删除后，当前AP以p_real=0.4395重新匹配专家事件1696（N，相对AP-22.0ms）。该专家事件在各阶段均检出，这是候选匹配变化，不是新增检出一个心搏。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="105" data-relation="LATE">
+<h3>MITDB_105_BENEFIT_ap01705</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注后超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/105/MITDB_105_BENEFIT_ap01705.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/105/MITDB_105_BENEFIT_ap01705.png" alt="MITDB_105_BENEFIT_ap01705"></a><p>当前AP在底层为FP，位于最近专家参考标注后281.5ms，超出±150ms评价容差。模型p_real=0.1855、p_noise=0.8145，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="105" data-relation="EARLY">
+<h3>MITDB_105_BENEFIT_ap01706</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/105/MITDB_105_BENEFIT_ap01706.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/105/MITDB_105_BENEFIT_ap01706.png" alt="MITDB_105_BENEFIT_ap01706"></a><p>当前AP在底层为FP，位于最近专家参考标注前225.5ms，超出±150ms评价容差。模型p_real=0.1758、p_noise=0.8242，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="105" data-relation="EARLY">
+<h3>MITDB_105_BENEFIT_ap01713</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/105/MITDB_105_BENEFIT_ap01713.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/105/MITDB_105_BENEFIT_ap01713.png" alt="MITDB_105_BENEFIT_ap01713"></a><p>当前AP在底层为FP，位于最近专家参考标注前227.0ms，超出±150ms评价容差。模型p_real=0.1758、p_noise=0.8242，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="RR_FP_REMOVED" data-record="105" data-relation="LATE">
+<h3>MITDB_105_BENEFIT_ap01724</h3><div class="tag">优势｜RR规则删除底层FP · 最近专家标注后超过150ms</div>
+<a href="images/RR_FP_REMOVED/105/MITDB_105_BENEFIT_ap01724.png" target="_blank"><img loading="lazy" src="images/RR_FP_REMOVED/105/MITDB_105_BENEFIT_ap01724.png" alt="MITDB_105_BENEFIT_ap01724"></a><p>当前AP在底层为FP，位于最近专家参考标注后322.5ms，超出±150ms评价容差。模型以p_real=0.3066保留，随后Rule 1删除；RR=295.0ms，参考RR=663.5ms，比值=0.445，历史稳定=1、cooldown=0。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="105" data-relation="EARLY">
+<h3>MITDB_105_BENEFIT_ap01727</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/105/MITDB_105_BENEFIT_ap01727.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/105/MITDB_105_BENEFIT_ap01727.png" alt="MITDB_105_BENEFIT_ap01727"></a><p>当前AP在底层为FP，位于最近专家参考标注前243.0ms，超出±150ms评价容差。模型p_real=0.1748、p_noise=0.8252，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="105" data-relation="EARLY">
+<h3>MITDB_105_BENEFIT_ap01732</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/105/MITDB_105_BENEFIT_ap01732.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/105/MITDB_105_BENEFIT_ap01732.png" alt="MITDB_105_BENEFIT_ap01732"></a><p>当前AP在底层为FP，位于最近专家参考标注前169.5ms，超出±150ms评价容差。模型p_real=0.1621、p_noise=0.8379，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="RR_FP_REMOVED" data-record="105" data-relation="EARLY">
+<h3>MITDB_105_BENEFIT_ap01737</h3><div class="tag">优势｜RR规则删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/RR_FP_REMOVED/105/MITDB_105_BENEFIT_ap01737.png" target="_blank"><img loading="lazy" src="images/RR_FP_REMOVED/105/MITDB_105_BENEFIT_ap01737.png" alt="MITDB_105_BENEFIT_ap01737"></a><p>当前AP在底层为FP，位于最近专家参考标注前251.5ms，超出±150ms评价容差。模型以p_real=0.3223保留，随后Rule 2删除；RR=414.0ms，参考RR=659.5ms，比值=0.628，历史稳定=1、cooldown=1。此前3秒低置信AP数=2，前一保留概率减当前概率=0.369。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="105" data-relation="EARLY">
+<h3>MITDB_105_BENEFIT_ap01755</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/105/MITDB_105_BENEFIT_ap01755.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/105/MITDB_105_BENEFIT_ap01755.png" alt="MITDB_105_BENEFIT_ap01755"></a><p>当前AP在底层为FP，位于最近专家参考标注前373.5ms，超出±150ms评价容差。模型p_real=0.2158、p_noise=0.7842，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="RR_FP_REMOVED" data-record="105" data-relation="DUP_TP">
+<h3>MITDB_105_BENEFIT_ap01758</h3><div class="tag">优势｜RR规则删除底层FP · 容差内重复候选，专家事件仍检出</div>
+<a href="images/RR_FP_REMOVED/105/MITDB_105_BENEFIT_ap01758.png" target="_blank"><img loading="lazy" src="images/RR_FP_REMOVED/105/MITDB_105_BENEFIT_ap01758.png" alt="MITDB_105_BENEFIT_ap01758"></a><p>底层FP位于最近专家标注-150.0ms，在±150ms匹配容差内；该专家事件在底层已由AP#1757匹配。删除当前额外候选后，该专家事件仍由AP#1757检出。模型以p_real=0.3008保留，随后Rule 1删除；RR=159.5ms，参考RR=663.5ms，比值=0.240，历史稳定=1、cooldown=0。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="105" data-relation="EARLY">
+<h3>MITDB_105_BENEFIT_ap01760</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/105/MITDB_105_BENEFIT_ap01760.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/105/MITDB_105_BENEFIT_ap01760.png" alt="MITDB_105_BENEFIT_ap01760"></a><p>当前AP在底层为FP，位于最近专家参考标注前262.0ms，超出±150ms评价容差。模型p_real=0.2266、p_noise=0.7734，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="RR_FP_REMOVED" data-record="105" data-relation="EARLY">
+<h3>MITDB_105_BENEFIT_ap01824</h3><div class="tag">优势｜RR规则删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/RR_FP_REMOVED/105/MITDB_105_BENEFIT_ap01824.png" target="_blank"><img loading="lazy" src="images/RR_FP_REMOVED/105/MITDB_105_BENEFIT_ap01824.png" alt="MITDB_105_BENEFIT_ap01824"></a><p>当前AP在底层为FP，位于最近专家参考标注前242.0ms，超出±150ms评价容差。模型以p_real=0.3398保留，随后Rule 1删除；RR=400.5ms，参考RR=650.5ms，比值=0.616，历史稳定=1、cooldown=0。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="105" data-relation="EARLY">
+<h3>MITDB_105_BENEFIT_ap01862</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/105/MITDB_105_BENEFIT_ap01862.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/105/MITDB_105_BENEFIT_ap01862.png" alt="MITDB_105_BENEFIT_ap01862"></a><p>当前AP在底层为FP，位于最近专家参考标注前174.0ms，超出±150ms评价容差。模型p_real=0.2334、p_noise=0.7666，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="RR_FP_REMOVED" data-record="105" data-relation="EARLY">
+<h3>MITDB_105_BENEFIT_ap01867</h3><div class="tag">优势｜RR规则删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/RR_FP_REMOVED/105/MITDB_105_BENEFIT_ap01867.png" target="_blank"><img loading="lazy" src="images/RR_FP_REMOVED/105/MITDB_105_BENEFIT_ap01867.png" alt="MITDB_105_BENEFIT_ap01867"></a><p>当前AP在底层为FP，位于最近专家参考标注前573.0ms，超出±150ms评价容差。模型以p_real=0.3613保留，随后Rule 1删除；RR=299.0ms，参考RR=645.0ms，比值=0.464，历史稳定=1、cooldown=0。</p></article>
+<article data-type="RR_FP_REMOVED" data-record="105" data-relation="EARLY">
+<h3>MITDB_105_BENEFIT_ap01873</h3><div class="tag">优势｜RR规则删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/RR_FP_REMOVED/105/MITDB_105_BENEFIT_ap01873.png" target="_blank"><img loading="lazy" src="images/RR_FP_REMOVED/105/MITDB_105_BENEFIT_ap01873.png" alt="MITDB_105_BENEFIT_ap01873"></a><p>当前AP在底层为FP，位于最近专家参考标注前204.0ms，超出±150ms评价容差。模型以p_real=0.3574保留，随后Rule 1删除；RR=417.5ms，参考RR=650.0ms，比值=0.642，历史稳定=1、cooldown=0。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="105" data-relation="EARLY">
+<h3>MITDB_105_BENEFIT_ap01879</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/105/MITDB_105_BENEFIT_ap01879.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/105/MITDB_105_BENEFIT_ap01879.png" alt="MITDB_105_BENEFIT_ap01879"></a><p>当前AP在底层为FP，位于最近专家参考标注前228.0ms，超出±150ms评价容差。模型p_real=0.1689、p_noise=0.8311，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="105" data-relation="EARLY">
+<h3>MITDB_105_BENEFIT_ap01883</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/105/MITDB_105_BENEFIT_ap01883.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/105/MITDB_105_BENEFIT_ap01883.png" alt="MITDB_105_BENEFIT_ap01883"></a><p>当前AP在底层为FP，位于最近专家参考标注前178.0ms，超出±150ms评价容差。模型p_real=0.2285、p_noise=0.7715，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="105" data-relation="LATE">
+<h3>MITDB_105_BENEFIT_ap01887</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注后超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/105/MITDB_105_BENEFIT_ap01887.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/105/MITDB_105_BENEFIT_ap01887.png" alt="MITDB_105_BENEFIT_ap01887"></a><p>当前AP在底层为FP，位于最近专家参考标注后151.5ms，超出±150ms评价容差。模型p_real=0.2021、p_noise=0.7979，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="105" data-relation="LATE">
+<h3>MITDB_105_BENEFIT_ap01889</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注后超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/105/MITDB_105_BENEFIT_ap01889.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/105/MITDB_105_BENEFIT_ap01889.png" alt="MITDB_105_BENEFIT_ap01889"></a><p>当前AP在底层为FP，位于最近专家参考标注后248.0ms，超出±150ms评价容差。模型p_real=0.2676、p_noise=0.7324，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="105" data-relation="LATE">
+<h3>MITDB_105_BENEFIT_ap01894</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注后超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/105/MITDB_105_BENEFIT_ap01894.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/105/MITDB_105_BENEFIT_ap01894.png" alt="MITDB_105_BENEFIT_ap01894"></a><p>当前AP在底层为FP，位于最近专家参考标注后243.5ms，超出±150ms评价容差。模型p_real=0.2285、p_noise=0.7715，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="105" data-relation="LATE">
+<h3>MITDB_105_BENEFIT_ap01901</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注后超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/105/MITDB_105_BENEFIT_ap01901.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/105/MITDB_105_BENEFIT_ap01901.png" alt="MITDB_105_BENEFIT_ap01901"></a><p>当前AP在底层为FP，位于最近专家参考标注后373.0ms，超出±150ms评价容差。模型p_real=0.2480、p_noise=0.7520，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="105" data-relation="EARLY">
+<h3>MITDB_105_BENEFIT_ap01903</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/105/MITDB_105_BENEFIT_ap01903.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/105/MITDB_105_BENEFIT_ap01903.png" alt="MITDB_105_BENEFIT_ap01903"></a><p>当前AP在底层为FP，位于最近专家参考标注前432.5ms，超出±150ms评价容差。模型p_real=0.2070、p_noise=0.7930，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="105" data-relation="DUP_FN">
+<h3>MITDB_105_BENEFIT_ap01906</h3><div class="tag">优势｜模型删除底层FP · 容差内重复候选，专家事件最终漏检</div>
+<a href="images/MODEL_FP_REMOVED/105/MITDB_105_BENEFIT_ap01906.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/105/MITDB_105_BENEFIT_ap01906.png" alt="MITDB_105_BENEFIT_ap01906"></a><p>底层FP位于最近专家标注-27.0ms，在±150ms匹配容差内；该专家事件在底层已由AP#1905匹配。当前FP候选及原匹配TP候选均被删除，该专家事件最终漏检。同一片段同时计入候选级FP减少和事件级新增FN，不能据FP标签把该波形判为噪声。模型p_real=0.1973、p_noise=0.8027，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="105" data-relation="EARLY">
+<h3>MITDB_105_BENEFIT_ap01920</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/105/MITDB_105_BENEFIT_ap01920.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/105/MITDB_105_BENEFIT_ap01920.png" alt="MITDB_105_BENEFIT_ap01920"></a><p>当前AP在底层为FP，位于最近专家参考标注前252.0ms，超出±150ms评价容差。模型p_real=0.1758、p_noise=0.8242，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="RR_FP_REMOVED" data-record="105" data-relation="LATE">
+<h3>MITDB_105_BENEFIT_ap02391</h3><div class="tag">优势｜RR规则删除底层FP · 最近专家标注后超过150ms</div>
+<a href="images/RR_FP_REMOVED/105/MITDB_105_BENEFIT_ap02391.png" target="_blank"><img loading="lazy" src="images/RR_FP_REMOVED/105/MITDB_105_BENEFIT_ap02391.png" alt="MITDB_105_BENEFIT_ap02391"></a><p>当前AP在底层为FP，位于最近专家参考标注后328.0ms，超出±150ms评价容差。模型以p_real=0.3535保留，随后Rule 2删除；RR=335.5ms，参考RR=691.0ms，比值=0.486，历史稳定=1、cooldown=1。此前3秒低置信AP数=2，前一保留概率减当前概率=0.572。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="105" data-relation="LATE">
+<h3>MITDB_105_BENEFIT_ap02392</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注后超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/105/MITDB_105_BENEFIT_ap02392.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/105/MITDB_105_BENEFIT_ap02392.png" alt="MITDB_105_BENEFIT_ap02392"></a><p>当前AP在底层为FP，位于最近专家参考标注后538.0ms，超出±150ms评价容差。模型p_real=0.2695、p_noise=0.7305，未通过原0.70噪声阈值；RR未评估此候选。该候选的模型节律输入引用了AP后超过100ms的位置，属于冻结模型离线画像。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="105" data-relation="EARLY">
+<h3>MITDB_105_BENEFIT_ap02443</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/105/MITDB_105_BENEFIT_ap02443.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/105/MITDB_105_BENEFIT_ap02443.png" alt="MITDB_105_BENEFIT_ap02443"></a><p>当前AP在底层为FP，位于最近专家参考标注前210.0ms，超出±150ms评价容差。模型p_real=0.2090、p_noise=0.7910，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="105" data-relation="EARLY">
+<h3>MITDB_105_BENEFIT_ap02453</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/105/MITDB_105_BENEFIT_ap02453.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/105/MITDB_105_BENEFIT_ap02453.png" alt="MITDB_105_BENEFIT_ap02453"></a><p>当前AP在底层为FP，位于最近专家参考标注前304.0ms，超出±150ms评价容差。模型p_real=0.1592、p_noise=0.8408，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="105" data-relation="EARLY">
+<h3>MITDB_105_BENEFIT_ap02455</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/105/MITDB_105_BENEFIT_ap02455.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/105/MITDB_105_BENEFIT_ap02455.png" alt="MITDB_105_BENEFIT_ap02455"></a><p>当前AP在底层为FP，位于最近专家参考标注前194.5ms，超出±150ms评价容差。模型p_real=0.2031、p_noise=0.7969，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="RR_FP_REMOVED" data-record="105" data-relation="EARLY">
+<h3>MITDB_105_BENEFIT_ap02461</h3><div class="tag">优势｜RR规则删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/RR_FP_REMOVED/105/MITDB_105_BENEFIT_ap02461.png" target="_blank"><img loading="lazy" src="images/RR_FP_REMOVED/105/MITDB_105_BENEFIT_ap02461.png" alt="MITDB_105_BENEFIT_ap02461"></a><p>当前AP在底层为FP，位于最近专家参考标注前211.0ms，超出±150ms评价容差。模型以p_real=0.4043保留，随后Rule 2删除；RR=472.0ms，参考RR=673.0ms，比值=0.701，历史稳定=1、cooldown=1。此前3秒低置信AP数=4，前一保留概率减当前概率=0.354。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="105" data-relation="EARLY">
+<h3>MITDB_105_BENEFIT_ap02491</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/105/MITDB_105_BENEFIT_ap02491.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/105/MITDB_105_BENEFIT_ap02491.png" alt="MITDB_105_BENEFIT_ap02491"></a><p>当前AP在底层为FP，位于最近专家参考标注前273.5ms，超出±150ms评价容差。模型p_real=0.2197、p_noise=0.7803，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="111" data-relation="LATE">
+<h3>MITDB_111_BENEFIT_ap00274</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注后超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/111/MITDB_111_BENEFIT_ap00274.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/111/MITDB_111_BENEFIT_ap00274.png" alt="MITDB_111_BENEFIT_ap00274"></a><p>当前AP在底层为FP，位于最近专家参考标注后436.5ms，超出±150ms评价容差。模型p_real=0.2988、p_noise=0.7012，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="RR_FP_REMOVED" data-record="111" data-relation="EARLY">
+<h3>MITDB_111_BENEFIT_ap01608</h3><div class="tag">优势｜RR规则删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/RR_FP_REMOVED/111/MITDB_111_BENEFIT_ap01608.png" target="_blank"><img loading="lazy" src="images/RR_FP_REMOVED/111/MITDB_111_BENEFIT_ap01608.png" alt="MITDB_111_BENEFIT_ap01608"></a><p>当前AP在底层为FP，位于最近专家参考标注前254.0ms，超出±150ms评价容差。模型以p_real=0.4336保留，随后Rule 1删除；RR=527.0ms，参考RR=807.5ms，比值=0.653，历史稳定=1、cooldown=0。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="117" data-relation="EARLY">
+<h3>MITDB_117_BENEFIT_ap00606</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/117/MITDB_117_BENEFIT_ap00606.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/117/MITDB_117_BENEFIT_ap00606.png" alt="MITDB_117_BENEFIT_ap00606"></a><p>当前AP在底层为FP，位于最近专家参考标注前280.5ms，超出±150ms评价容差。模型p_real=0.2520、p_noise=0.7480，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="121" data-relation="EARLY">
+<h3>MITDB_121_BENEFIT_ap00901</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/121/MITDB_121_BENEFIT_ap00901.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/121/MITDB_121_BENEFIT_ap00901.png" alt="MITDB_121_BENEFIT_ap00901"></a><p>当前AP在底层为FP，位于最近专家参考标注前160.0ms，超出±150ms评价容差。模型p_real=0.2393、p_noise=0.7607，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="121" data-relation="EARLY">
+<h3>MITDB_121_BENEFIT_ap01538</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/121/MITDB_121_BENEFIT_ap01538.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/121/MITDB_121_BENEFIT_ap01538.png" alt="MITDB_121_BENEFIT_ap01538"></a><p>当前AP在底层为FP，位于最近专家参考标注前361.0ms，超出±150ms评价容差。模型p_real=0.2305、p_noise=0.7695，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="121" data-relation="EARLY">
+<h3>MITDB_121_BENEFIT_ap01566</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/121/MITDB_121_BENEFIT_ap01566.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/121/MITDB_121_BENEFIT_ap01566.png" alt="MITDB_121_BENEFIT_ap01566"></a><p>当前AP在底层为FP，位于最近专家参考标注前179.5ms，超出±150ms评价容差。模型p_real=0.2061、p_noise=0.7939，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="121" data-relation="EARLY">
+<h3>MITDB_121_BENEFIT_ap01631</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/121/MITDB_121_BENEFIT_ap01631.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/121/MITDB_121_BENEFIT_ap01631.png" alt="MITDB_121_BENEFIT_ap01631"></a><p>当前AP在底层为FP，位于最近专家参考标注前151.5ms，超出±150ms评价容差。模型p_real=0.1846、p_noise=0.8154，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="121" data-relation="EARLY">
+<h3>MITDB_121_BENEFIT_ap01634</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/121/MITDB_121_BENEFIT_ap01634.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/121/MITDB_121_BENEFIT_ap01634.png" alt="MITDB_121_BENEFIT_ap01634"></a><p>当前AP在底层为FP，位于最近专家参考标注前247.0ms，超出±150ms评价容差。模型p_real=0.1426、p_noise=0.8574，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="121" data-relation="EARLY">
+<h3>MITDB_121_BENEFIT_ap01640</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/121/MITDB_121_BENEFIT_ap01640.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/121/MITDB_121_BENEFIT_ap01640.png" alt="MITDB_121_BENEFIT_ap01640"></a><p>当前AP在底层为FP，位于最近专家参考标注前174.0ms，超出±150ms评价容差。模型p_real=0.2070、p_noise=0.7930，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="121" data-relation="EARLY">
+<h3>MITDB_121_BENEFIT_ap01750</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/121/MITDB_121_BENEFIT_ap01750.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/121/MITDB_121_BENEFIT_ap01750.png" alt="MITDB_121_BENEFIT_ap01750"></a><p>当前AP在底层为FP，位于最近专家参考标注前303.0ms，超出±150ms评价容差。模型p_real=0.2236、p_noise=0.7764，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="200" data-relation="EARLY">
+<h3>MITDB_200_BENEFIT_ap00209</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/200/MITDB_200_BENEFIT_ap00209.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/200/MITDB_200_BENEFIT_ap00209.png" alt="MITDB_200_BENEFIT_ap00209"></a><p>当前AP在底层为FP，位于最近专家参考标注前175.5ms，超出±150ms评价容差。模型p_real=0.2891、p_noise=0.7109，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="200" data-relation="EARLY">
+<h3>MITDB_200_BENEFIT_ap00226</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/200/MITDB_200_BENEFIT_ap00226.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/200/MITDB_200_BENEFIT_ap00226.png" alt="MITDB_200_BENEFIT_ap00226"></a><p>当前AP在底层为FP，位于最近专家参考标注前243.5ms，超出±150ms评价容差。模型p_real=0.2676、p_noise=0.7324，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="200" data-relation="EARLY">
+<h3>MITDB_200_BENEFIT_ap00303</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/200/MITDB_200_BENEFIT_ap00303.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/200/MITDB_200_BENEFIT_ap00303.png" alt="MITDB_200_BENEFIT_ap00303"></a><p>当前AP在底层为FP，位于最近专家参考标注前268.5ms，超出±150ms评价容差。模型p_real=0.2559、p_noise=0.7441，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="200" data-relation="EARLY">
+<h3>MITDB_200_BENEFIT_ap00327</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/200/MITDB_200_BENEFIT_ap00327.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/200/MITDB_200_BENEFIT_ap00327.png" alt="MITDB_200_BENEFIT_ap00327"></a><p>当前AP在底层为FP，位于最近专家参考标注前264.0ms，超出±150ms评价容差。模型p_real=0.2871、p_noise=0.7129，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="RR_FP_REMOVED" data-record="200" data-relation="EARLY">
+<h3>MITDB_200_BENEFIT_ap00388</h3><div class="tag">优势｜RR规则删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/RR_FP_REMOVED/200/MITDB_200_BENEFIT_ap00388.png" target="_blank"><img loading="lazy" src="images/RR_FP_REMOVED/200/MITDB_200_BENEFIT_ap00388.png" alt="MITDB_200_BENEFIT_ap00388"></a><p>当前AP在底层为FP，位于最近专家参考标注前246.5ms，超出±150ms评价容差。模型以p_real=0.3184保留，随后Rule 1删除；RR=450.0ms，参考RR=638.2ms，比值=0.705，历史稳定=1、cooldown=0。该候选的模型节律输入引用了AP后超过100ms的位置，属于冻结模型离线画像。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="200" data-relation="EARLY">
+<h3>MITDB_200_BENEFIT_ap00395</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/200/MITDB_200_BENEFIT_ap00395.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/200/MITDB_200_BENEFIT_ap00395.png" alt="MITDB_200_BENEFIT_ap00395"></a><p>当前AP在底层为FP，位于最近专家参考标注前348.5ms，超出±150ms评价容差。模型p_real=0.2559、p_noise=0.7441，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="RR_FP_REMOVED" data-record="200" data-relation="EARLY">
+<h3>MITDB_200_BENEFIT_ap00455</h3><div class="tag">优势｜RR规则删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/RR_FP_REMOVED/200/MITDB_200_BENEFIT_ap00455.png" target="_blank"><img loading="lazy" src="images/RR_FP_REMOVED/200/MITDB_200_BENEFIT_ap00455.png" alt="MITDB_200_BENEFIT_ap00455"></a><p>当前AP在底层为FP，位于最近专家参考标注前249.5ms，超出±150ms评价容差。模型以p_real=0.4375保留，随后Rule 1删除；RR=308.0ms，参考RR=608.2ms，比值=0.506，历史稳定=1、cooldown=0。</p></article>
+<article data-type="RR_FP_REMOVED" data-record="200" data-relation="LATE">
+<h3>MITDB_200_BENEFIT_ap00465</h3><div class="tag">优势｜RR规则删除底层FP · 最近专家标注后超过150ms</div>
+<a href="images/RR_FP_REMOVED/200/MITDB_200_BENEFIT_ap00465.png" target="_blank"><img loading="lazy" src="images/RR_FP_REMOVED/200/MITDB_200_BENEFIT_ap00465.png" alt="MITDB_200_BENEFIT_ap00465"></a><p>当前AP在底层为FP，位于最近专家参考标注后189.0ms，超出±150ms评价容差。模型以p_real=0.3555保留，随后Rule 1删除；RR=289.5ms，参考RR=599.2ms，比值=0.483，历史稳定=1、cooldown=0。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="200" data-relation="EARLY">
+<h3>MITDB_200_BENEFIT_ap00516</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/200/MITDB_200_BENEFIT_ap00516.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/200/MITDB_200_BENEFIT_ap00516.png" alt="MITDB_200_BENEFIT_ap00516"></a><p>当前AP在底层为FP，位于最近专家参考标注前187.0ms，超出±150ms评价容差。模型p_real=0.2910、p_noise=0.7090，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="200" data-relation="EARLY">
+<h3>MITDB_200_BENEFIT_ap00522</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/200/MITDB_200_BENEFIT_ap00522.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/200/MITDB_200_BENEFIT_ap00522.png" alt="MITDB_200_BENEFIT_ap00522"></a><p>当前AP在底层为FP，位于最近专家参考标注前210.5ms，超出±150ms评价容差。模型p_real=0.2383、p_noise=0.7617，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="200" data-relation="LATE">
+<h3>MITDB_200_BENEFIT_ap00712</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注后超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/200/MITDB_200_BENEFIT_ap00712.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/200/MITDB_200_BENEFIT_ap00712.png" alt="MITDB_200_BENEFIT_ap00712"></a><p>当前AP在底层为FP，位于最近专家参考标注后486.0ms，超出±150ms评价容差。模型p_real=0.2852、p_noise=0.7148，未通过原0.70噪声阈值；RR未评估此候选。该候选的模型节律输入引用了AP后超过100ms的位置，属于冻结模型离线画像。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="200" data-relation="EARLY">
+<h3>MITDB_200_BENEFIT_ap00715</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/200/MITDB_200_BENEFIT_ap00715.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/200/MITDB_200_BENEFIT_ap00715.png" alt="MITDB_200_BENEFIT_ap00715"></a><p>当前AP在底层为FP，位于最近专家参考标注前365.5ms，超出±150ms评价容差。模型p_real=0.2773、p_noise=0.7227，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="RR_FP_REMOVED" data-record="200" data-relation="DUP_TP">
+<h3>MITDB_200_BENEFIT_ap00884</h3><div class="tag">优势｜RR规则删除底层FP · 容差内重复候选，专家事件仍检出</div>
+<a href="images/RR_FP_REMOVED/200/MITDB_200_BENEFIT_ap00884.png" target="_blank"><img loading="lazy" src="images/RR_FP_REMOVED/200/MITDB_200_BENEFIT_ap00884.png" alt="MITDB_200_BENEFIT_ap00884"></a><p>底层FP位于最近专家标注-145.0ms，在±150ms匹配容差内；该专家事件在底层已由AP#883匹配。删除当前额外候选后，该专家事件仍由AP#883检出。模型以p_real=0.3008保留，随后Rule 1删除；RR=207.0ms，参考RR=823.2ms，比值=0.251，历史稳定=1、cooldown=0。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="200" data-relation="LATE">
+<h3>MITDB_200_BENEFIT_ap00896</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注后超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/200/MITDB_200_BENEFIT_ap00896.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/200/MITDB_200_BENEFIT_ap00896.png" alt="MITDB_200_BENEFIT_ap00896"></a><p>当前AP在底层为FP，位于最近专家参考标注后334.5ms，超出±150ms评价容差。模型p_real=0.2715、p_noise=0.7285，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="RR_FP_REMOVED" data-record="200" data-relation="EARLY">
+<h3>MITDB_200_BENEFIT_ap00913</h3><div class="tag">优势｜RR规则删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/RR_FP_REMOVED/200/MITDB_200_BENEFIT_ap00913.png" target="_blank"><img loading="lazy" src="images/RR_FP_REMOVED/200/MITDB_200_BENEFIT_ap00913.png" alt="MITDB_200_BENEFIT_ap00913"></a><p>当前AP在底层为FP，位于最近专家参考标注前169.5ms，超出±150ms评价容差。模型以p_real=0.3320保留，随后Rule 1删除；RR=488.0ms，参考RR=763.5ms，比值=0.639，历史稳定=1、cooldown=0。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="200" data-relation="EARLY">
+<h3>MITDB_200_BENEFIT_ap00930</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/200/MITDB_200_BENEFIT_ap00930.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/200/MITDB_200_BENEFIT_ap00930.png" alt="MITDB_200_BENEFIT_ap00930"></a><p>当前AP在底层为FP，位于最近专家参考标注前458.5ms，超出±150ms评价容差。模型p_real=0.2734、p_noise=0.7266，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="200" data-relation="EARLY">
+<h3>MITDB_200_BENEFIT_ap01336</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/200/MITDB_200_BENEFIT_ap01336.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/200/MITDB_200_BENEFIT_ap01336.png" alt="MITDB_200_BENEFIT_ap01336"></a><p>当前AP在底层为FP，位于最近专家参考标注前292.0ms，超出±150ms评价容差。模型p_real=0.2656、p_noise=0.7344，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="200" data-relation="EARLY">
+<h3>MITDB_200_BENEFIT_ap01447</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/200/MITDB_200_BENEFIT_ap01447.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/200/MITDB_200_BENEFIT_ap01447.png" alt="MITDB_200_BENEFIT_ap01447"></a><p>当前AP在底层为FP，位于最近专家参考标注前226.0ms，超出±150ms评价容差。模型p_real=0.2070、p_noise=0.7930，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="200" data-relation="EARLY">
+<h3>MITDB_200_BENEFIT_ap01669</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/200/MITDB_200_BENEFIT_ap01669.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/200/MITDB_200_BENEFIT_ap01669.png" alt="MITDB_200_BENEFIT_ap01669"></a><p>当前AP在底层为FP，位于最近专家参考标注前274.5ms，超出±150ms评价容差。模型p_real=0.2422、p_noise=0.7578，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="200" data-relation="EARLY">
+<h3>MITDB_200_BENEFIT_ap01831</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/200/MITDB_200_BENEFIT_ap01831.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/200/MITDB_200_BENEFIT_ap01831.png" alt="MITDB_200_BENEFIT_ap01831"></a><p>当前AP在底层为FP，位于最近专家参考标注前312.5ms，超出±150ms评价容差。模型p_real=0.2031、p_noise=0.7969，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="200" data-relation="EARLY">
+<h3>MITDB_200_BENEFIT_ap01853</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/200/MITDB_200_BENEFIT_ap01853.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/200/MITDB_200_BENEFIT_ap01853.png" alt="MITDB_200_BENEFIT_ap01853"></a><p>当前AP在底层为FP，位于最近专家参考标注前182.0ms，超出±150ms评价容差。模型p_real=0.2676、p_noise=0.7324，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="200" data-relation="EARLY">
+<h3>MITDB_200_BENEFIT_ap02255</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/200/MITDB_200_BENEFIT_ap02255.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/200/MITDB_200_BENEFIT_ap02255.png" alt="MITDB_200_BENEFIT_ap02255"></a><p>当前AP在底层为FP，位于最近专家参考标注前341.5ms，超出±150ms评价容差。模型p_real=0.2910、p_noise=0.7090，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="200" data-relation="EARLY">
+<h3>MITDB_200_BENEFIT_ap02420</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/200/MITDB_200_BENEFIT_ap02420.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/200/MITDB_200_BENEFIT_ap02420.png" alt="MITDB_200_BENEFIT_ap02420"></a><p>当前AP在底层为FP，位于最近专家参考标注前255.5ms，超出±150ms评价容差。模型p_real=0.2734、p_noise=0.7266，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="RR_FP_REMOVED" data-record="200" data-relation="LATE">
+<h3>MITDB_200_BENEFIT_ap02427</h3><div class="tag">优势｜RR规则删除底层FP · 最近专家标注后超过150ms</div>
+<a href="images/RR_FP_REMOVED/200/MITDB_200_BENEFIT_ap02427.png" target="_blank"><img loading="lazy" src="images/RR_FP_REMOVED/200/MITDB_200_BENEFIT_ap02427.png" alt="MITDB_200_BENEFIT_ap02427"></a><p>当前AP在底层为FP，位于最近专家参考标注后446.0ms，超出±150ms评价容差。模型以p_real=0.4453保留，随后Rule 1删除；RR=451.0ms，参考RR=688.8ms，比值=0.655，历史稳定=1、cooldown=0。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="200" data-relation="EARLY">
+<h3>MITDB_200_BENEFIT_ap02447</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/200/MITDB_200_BENEFIT_ap02447.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/200/MITDB_200_BENEFIT_ap02447.png" alt="MITDB_200_BENEFIT_ap02447"></a><p>当前AP在底层为FP，位于最近专家参考标注前287.5ms，超出±150ms评价容差。模型p_real=0.2480、p_noise=0.7520，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="200" data-relation="EARLY">
+<h3>MITDB_200_BENEFIT_ap02454</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/200/MITDB_200_BENEFIT_ap02454.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/200/MITDB_200_BENEFIT_ap02454.png" alt="MITDB_200_BENEFIT_ap02454"></a><p>当前AP在底层为FP，位于最近专家参考标注前218.0ms，超出±150ms评价容差。模型p_real=0.2637、p_noise=0.7363，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="200" data-relation="EARLY">
+<h3>MITDB_200_BENEFIT_ap02597</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/200/MITDB_200_BENEFIT_ap02597.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/200/MITDB_200_BENEFIT_ap02597.png" alt="MITDB_200_BENEFIT_ap02597"></a><p>当前AP在底层为FP，位于最近专家参考标注前205.5ms，超出±150ms评价容差。模型p_real=0.2910、p_noise=0.7090，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="200" data-relation="EARLY">
+<h3>MITDB_200_BENEFIT_ap02629</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/200/MITDB_200_BENEFIT_ap02629.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/200/MITDB_200_BENEFIT_ap02629.png" alt="MITDB_200_BENEFIT_ap02629"></a><p>当前AP在底层为FP，位于最近专家参考标注前237.5ms，超出±150ms评价容差。模型p_real=0.2451、p_noise=0.7549，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="203" data-relation="EARLY">
+<h3>MITDB_203_BENEFIT_ap00065</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap00065.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap00065.png" alt="MITDB_203_BENEFIT_ap00065"></a><p>当前AP在底层为FP，位于最近专家参考标注前217.0ms，超出±150ms评价容差。模型p_real=0.2148、p_noise=0.7852，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="FP_TO_TP_REASSIGNED" data-record="203" data-relation="REASSIGNED">
+<h3>MITDB_203_BENEFIT_ap00067</h3><div class="tag">优势｜FP重新匹配为TP（候选保留） · FP重新匹配为TP</div>
+<a href="images/FP_TO_TP_REASSIGNED/203/MITDB_203_BENEFIT_ap00067.png" target="_blank"><img loading="lazy" src="images/FP_TO_TP_REASSIGNED/203/MITDB_203_BENEFIT_ap00067.png" alt="MITDB_203_BENEFIT_ap00067"></a><p>当前AP在底层被评价为FP，但未被模型或RR删除；原匹配AP#66被模型删除后，当前AP以p_real=0.5039重新匹配专家事件76（V，相对AP-87.0ms）。该专家事件在各阶段均检出，这是候选匹配变化，不是新增检出一个心搏。</p></article>
+<article data-type="FP_TO_TP_REASSIGNED" data-record="203" data-relation="REASSIGNED">
+<h3>MITDB_203_BENEFIT_ap00170</h3><div class="tag">优势｜FP重新匹配为TP（候选保留） · FP重新匹配为TP</div>
+<a href="images/FP_TO_TP_REASSIGNED/203/MITDB_203_BENEFIT_ap00170.png" target="_blank"><img loading="lazy" src="images/FP_TO_TP_REASSIGNED/203/MITDB_203_BENEFIT_ap00170.png" alt="MITDB_203_BENEFIT_ap00170"></a><p>当前AP在底层被评价为FP，但未被模型或RR删除；原匹配AP#169被模型删除后，当前AP以p_real=0.6992重新匹配专家事件177（N，相对AP-27.5ms）。该专家事件在各阶段均检出，这是候选匹配变化，不是新增检出一个心搏。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="203" data-relation="EARLY">
+<h3>MITDB_203_BENEFIT_ap00482</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap00482.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap00482.png" alt="MITDB_203_BENEFIT_ap00482"></a><p>当前AP在底层为FP，位于最近专家参考标注前240.5ms，超出±150ms评价容差。模型p_real=0.2041、p_noise=0.7959，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="203" data-relation="EARLY">
+<h3>MITDB_203_BENEFIT_ap00484</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap00484.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap00484.png" alt="MITDB_203_BENEFIT_ap00484"></a><p>当前AP在底层为FP，位于最近专家参考标注前184.0ms，超出±150ms评价容差。模型p_real=0.2451、p_noise=0.7549，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="203" data-relation="EARLY">
+<h3>MITDB_203_BENEFIT_ap00486</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap00486.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap00486.png" alt="MITDB_203_BENEFIT_ap00486"></a><p>当前AP在底层为FP，位于最近专家参考标注前203.5ms，超出±150ms评价容差。模型p_real=0.1992、p_noise=0.8008，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="203" data-relation="EARLY">
+<h3>MITDB_203_BENEFIT_ap00489</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap00489.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap00489.png" alt="MITDB_203_BENEFIT_ap00489"></a><p>当前AP在底层为FP，位于最近专家参考标注前275.0ms，超出±150ms评价容差。模型p_real=0.2383、p_noise=0.7617，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="203" data-relation="EARLY">
+<h3>MITDB_203_BENEFIT_ap00641</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap00641.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap00641.png" alt="MITDB_203_BENEFIT_ap00641"></a><p>当前AP在底层为FP，位于最近专家参考标注前196.5ms，超出±150ms评价容差。模型p_real=0.2451、p_noise=0.7549，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="203" data-relation="EARLY">
+<h3>MITDB_203_BENEFIT_ap00644</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap00644.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap00644.png" alt="MITDB_203_BENEFIT_ap00644"></a><p>当前AP在底层为FP，位于最近专家参考标注前277.5ms，超出±150ms评价容差。模型p_real=0.2217、p_noise=0.7783，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="203" data-relation="EARLY">
+<h3>MITDB_203_BENEFIT_ap00795</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap00795.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap00795.png" alt="MITDB_203_BENEFIT_ap00795"></a><p>当前AP在底层为FP，位于最近专家参考标注前334.5ms，超出±150ms评价容差。模型p_real=0.2080、p_noise=0.7920，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="203" data-relation="LATE">
+<h3>MITDB_203_BENEFIT_ap00811</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注后超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap00811.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap00811.png" alt="MITDB_203_BENEFIT_ap00811"></a><p>当前AP在底层为FP，位于最近专家参考标注后420.5ms，超出±150ms评价容差。模型p_real=0.2227、p_noise=0.7773，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="FP_TO_TP_REASSIGNED" data-record="203" data-relation="REASSIGNED">
+<h3>MITDB_203_BENEFIT_ap00852</h3><div class="tag">优势｜FP重新匹配为TP（候选保留） · FP重新匹配为TP</div>
+<a href="images/FP_TO_TP_REASSIGNED/203/MITDB_203_BENEFIT_ap00852.png" target="_blank"><img loading="lazy" src="images/FP_TO_TP_REASSIGNED/203/MITDB_203_BENEFIT_ap00852.png" alt="MITDB_203_BENEFIT_ap00852"></a><p>当前AP在底层被评价为FP，但未被模型或RR删除；原匹配AP#851被模型删除后，当前AP以p_real=0.6016重新匹配专家事件853（N，相对AP-23.5ms）。该专家事件在各阶段均检出，这是候选匹配变化，不是新增检出一个心搏。</p></article>
+<article data-type="RR_FP_REMOVED" data-record="203" data-relation="EARLY">
+<h3>MITDB_203_BENEFIT_ap00885</h3><div class="tag">优势｜RR规则删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/RR_FP_REMOVED/203/MITDB_203_BENEFIT_ap00885.png" target="_blank"><img loading="lazy" src="images/RR_FP_REMOVED/203/MITDB_203_BENEFIT_ap00885.png" alt="MITDB_203_BENEFIT_ap00885"></a><p>当前AP在底层为FP，位于最近专家参考标注前280.5ms，超出±150ms评价容差。模型以p_real=0.3281保留，随后Rule 1删除；RR=307.5ms，参考RR=396.0ms，比值=0.777，历史稳定=1、cooldown=0。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="203" data-relation="LATE">
+<h3>MITDB_203_BENEFIT_ap00887</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注后超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap00887.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap00887.png" alt="MITDB_203_BENEFIT_ap00887"></a><p>当前AP在底层为FP，位于最近专家参考标注后307.5ms，超出±150ms评价容差。模型p_real=0.2852、p_noise=0.7148，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="203" data-relation="EARLY">
+<h3>MITDB_203_BENEFIT_ap00888</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap00888.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap00888.png" alt="MITDB_203_BENEFIT_ap00888"></a><p>当前AP在底层为FP，位于最近专家参考标注前522.5ms，超出±150ms评价容差。模型p_real=0.2354、p_noise=0.7646，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="203" data-relation="EARLY">
+<h3>MITDB_203_BENEFIT_ap00889</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap00889.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap00889.png" alt="MITDB_203_BENEFIT_ap00889"></a><p>当前AP在底层为FP，位于最近专家参考标注前320.5ms，超出±150ms评价容差。模型p_real=0.2871、p_noise=0.7129，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="203" data-relation="DUP_FN">
+<h3>MITDB_203_BENEFIT_ap00891</h3><div class="tag">优势｜模型删除底层FP · 容差内重复候选，专家事件最终漏检</div>
+<a href="images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap00891.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap00891.png" alt="MITDB_203_BENEFIT_ap00891"></a><p>底层FP位于最近专家标注-25.5ms，在±150ms匹配容差内；该专家事件在底层已由AP#890匹配。当前FP候选及原匹配TP候选均被删除，该专家事件最终漏检。同一片段同时计入候选级FP减少和事件级新增FN，不能据FP标签把该波形判为噪声。模型p_real=0.2910、p_noise=0.7090，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="203" data-relation="LATE">
+<h3>MITDB_203_BENEFIT_ap00892</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注后超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap00892.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap00892.png" alt="MITDB_203_BENEFIT_ap00892"></a><p>当前AP在底层为FP，位于最近专家参考标注后300.0ms，超出±150ms评价容差。模型p_real=0.2383、p_noise=0.7617，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="203" data-relation="EARLY">
+<h3>MITDB_203_BENEFIT_ap00895</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap00895.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap00895.png" alt="MITDB_203_BENEFIT_ap00895"></a><p>当前AP在底层为FP，位于最近专家参考标注前197.5ms，超出±150ms评价容差。模型p_real=0.2480、p_noise=0.7520，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="203" data-relation="LATE">
+<h3>MITDB_203_BENEFIT_ap01031</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注后超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap01031.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap01031.png" alt="MITDB_203_BENEFIT_ap01031"></a><p>当前AP在底层为FP，位于最近专家参考标注后294.5ms，超出±150ms评价容差。模型p_real=0.2949、p_noise=0.7051，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="RR_FP_REMOVED" data-record="203" data-relation="LATE">
+<h3>MITDB_203_BENEFIT_ap01041</h3><div class="tag">优势｜RR规则删除底层FP · 最近专家标注后超过150ms</div>
+<a href="images/RR_FP_REMOVED/203/MITDB_203_BENEFIT_ap01041.png" target="_blank"><img loading="lazy" src="images/RR_FP_REMOVED/203/MITDB_203_BENEFIT_ap01041.png" alt="MITDB_203_BENEFIT_ap01041"></a><p>当前AP在底层为FP，位于最近专家参考标注后201.5ms，超出±150ms评价容差。模型以p_real=0.3340保留，随后Rule 1删除；RR=192.0ms，参考RR=410.2ms，比值=0.468，历史稳定=1、cooldown=0。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="203" data-relation="EARLY">
+<h3>MITDB_203_BENEFIT_ap01042</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap01042.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap01042.png" alt="MITDB_203_BENEFIT_ap01042"></a><p>当前AP在底层为FP，位于最近专家参考标注前266.0ms，超出±150ms评价容差。模型p_real=0.2217、p_noise=0.7783，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="RR_FP_REMOVED" data-record="203" data-relation="DUP_TP">
+<h3>MITDB_203_BENEFIT_ap01045</h3><div class="tag">优势｜RR规则删除底层FP · 容差内重复候选，专家事件仍检出</div>
+<a href="images/RR_FP_REMOVED/203/MITDB_203_BENEFIT_ap01045.png" target="_blank"><img loading="lazy" src="images/RR_FP_REMOVED/203/MITDB_203_BENEFIT_ap01045.png" alt="MITDB_203_BENEFIT_ap01045"></a><p>底层FP位于最近专家标注-97.0ms，在±150ms匹配容差内；该专家事件在底层已由AP#1044匹配。删除当前额外候选后，该专家事件仍由AP#1044检出。模型以p_real=0.5078保留，随后Rule 2删除；RR=155.5ms，参考RR=410.0ms，比值=0.379，历史稳定=1、cooldown=1。此前3秒低置信AP数=3，前一保留概率减当前概率=0.359。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="203" data-relation="EARLY">
+<h3>MITDB_203_BENEFIT_ap01134</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap01134.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap01134.png" alt="MITDB_203_BENEFIT_ap01134"></a><p>当前AP在底层为FP，位于最近专家参考标注前173.0ms，超出±150ms评价容差。模型p_real=0.2793、p_noise=0.7207，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="203" data-relation="LATE">
+<h3>MITDB_203_BENEFIT_ap01240</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注后超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap01240.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap01240.png" alt="MITDB_203_BENEFIT_ap01240"></a><p>当前AP在底层为FP，位于最近专家参考标注后249.5ms，超出±150ms评价容差。模型p_real=0.2676、p_noise=0.7324，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="203" data-relation="LATE">
+<h3>MITDB_203_BENEFIT_ap01296</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注后超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap01296.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap01296.png" alt="MITDB_203_BENEFIT_ap01296"></a><p>当前AP在底层为FP，位于最近专家参考标注后270.5ms，超出±150ms评价容差。模型p_real=0.2256、p_noise=0.7744，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="203" data-relation="LATE">
+<h3>MITDB_203_BENEFIT_ap01305</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注后超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap01305.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap01305.png" alt="MITDB_203_BENEFIT_ap01305"></a><p>当前AP在底层为FP，位于最近专家参考标注后210.5ms，超出±150ms评价容差。模型p_real=0.2256、p_noise=0.7744，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="203" data-relation="EARLY">
+<h3>MITDB_203_BENEFIT_ap01326</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap01326.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap01326.png" alt="MITDB_203_BENEFIT_ap01326"></a><p>当前AP在底层为FP，位于最近专家参考标注前273.0ms，超出±150ms评价容差。模型p_real=0.1992、p_noise=0.8008，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="203" data-relation="LATE">
+<h3>MITDB_203_BENEFIT_ap01450</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注后超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap01450.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap01450.png" alt="MITDB_203_BENEFIT_ap01450"></a><p>当前AP在底层为FP，位于最近专家参考标注后322.0ms，超出±150ms评价容差。模型p_real=0.2090、p_noise=0.7910，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="203" data-relation="LATE">
+<h3>MITDB_203_BENEFIT_ap01477</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注后超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap01477.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap01477.png" alt="MITDB_203_BENEFIT_ap01477"></a><p>当前AP在底层为FP，位于最近专家参考标注后428.0ms，超出±150ms评价容差。模型p_real=0.2676、p_noise=0.7324，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="203" data-relation="EARLY">
+<h3>MITDB_203_BENEFIT_ap01534</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap01534.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap01534.png" alt="MITDB_203_BENEFIT_ap01534"></a><p>当前AP在底层为FP，位于最近专家参考标注前174.0ms，超出±150ms评价容差。模型p_real=0.2041、p_noise=0.7959，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="203" data-relation="EARLY">
+<h3>MITDB_203_BENEFIT_ap01576</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap01576.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap01576.png" alt="MITDB_203_BENEFIT_ap01576"></a><p>当前AP在底层为FP，位于最近专家参考标注前367.0ms，超出±150ms评价容差。模型p_real=0.2451、p_noise=0.7549，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="203" data-relation="EARLY">
+<h3>MITDB_203_BENEFIT_ap01789</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap01789.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap01789.png" alt="MITDB_203_BENEFIT_ap01789"></a><p>当前AP在底层为FP，位于最近专家参考标注前168.5ms，超出±150ms评价容差。模型p_real=0.2988、p_noise=0.7012，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="203" data-relation="LATE">
+<h3>MITDB_203_BENEFIT_ap01797</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注后超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap01797.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap01797.png" alt="MITDB_203_BENEFIT_ap01797"></a><p>当前AP在底层为FP，位于最近专家参考标注后435.5ms，超出±150ms评价容差。模型p_real=0.2432、p_noise=0.7568，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="203" data-relation="EARLY">
+<h3>MITDB_203_BENEFIT_ap01798</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap01798.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap01798.png" alt="MITDB_203_BENEFIT_ap01798"></a><p>当前AP在底层为FP，位于最近专家参考标注前152.5ms，超出±150ms评价容差。模型p_real=0.2656、p_noise=0.7344，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="203" data-relation="EARLY">
+<h3>MITDB_203_BENEFIT_ap01804</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap01804.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap01804.png" alt="MITDB_203_BENEFIT_ap01804"></a><p>当前AP在底层为FP，位于最近专家参考标注前404.5ms，超出±150ms评价容差。模型p_real=0.2070、p_noise=0.7930，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="203" data-relation="LATE">
+<h3>MITDB_203_BENEFIT_ap01807</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注后超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap01807.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap01807.png" alt="MITDB_203_BENEFIT_ap01807"></a><p>当前AP在底层为FP，位于最近专家参考标注后404.0ms，超出±150ms评价容差。模型p_real=0.2988、p_noise=0.7012，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="FP_TO_TP_REASSIGNED" data-record="203" data-relation="REASSIGNED">
+<h3>MITDB_203_BENEFIT_ap01809</h3><div class="tag">优势｜FP重新匹配为TP（候选保留） · FP重新匹配为TP</div>
+<a href="images/FP_TO_TP_REASSIGNED/203/MITDB_203_BENEFIT_ap01809.png" target="_blank"><img loading="lazy" src="images/FP_TO_TP_REASSIGNED/203/MITDB_203_BENEFIT_ap01809.png" alt="MITDB_203_BENEFIT_ap01809"></a><p>当前AP在底层被评价为FP，但未被模型或RR删除；原匹配AP#1808被模型删除后，当前AP以p_real=0.7109重新匹配专家事件1772（N，相对AP-27.5ms）。该专家事件在各阶段均检出，这是候选匹配变化，不是新增检出一个心搏。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="203" data-relation="EARLY">
+<h3>MITDB_203_BENEFIT_ap01943</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap01943.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap01943.png" alt="MITDB_203_BENEFIT_ap01943"></a><p>当前AP在底层为FP，位于最近专家参考标注前249.0ms，超出±150ms评价容差。模型p_real=0.2695、p_noise=0.7305，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="203" data-relation="EARLY">
+<h3>MITDB_203_BENEFIT_ap01949</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap01949.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap01949.png" alt="MITDB_203_BENEFIT_ap01949"></a><p>当前AP在底层为FP，位于最近专家参考标注前274.5ms，超出±150ms评价容差。模型p_real=0.2734、p_noise=0.7266，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="203" data-relation="EARLY">
+<h3>MITDB_203_BENEFIT_ap01952</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap01952.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap01952.png" alt="MITDB_203_BENEFIT_ap01952"></a><p>当前AP在底层为FP，位于最近专家参考标注前199.0ms，超出±150ms评价容差。模型p_real=0.2393、p_noise=0.7607，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="203" data-relation="LATE">
+<h3>MITDB_203_BENEFIT_ap01954</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注后超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap01954.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap01954.png" alt="MITDB_203_BENEFIT_ap01954"></a><p>当前AP在底层为FP，位于最近专家参考标注后334.5ms，超出±150ms评价容差。模型p_real=0.2891、p_noise=0.7109，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="203" data-relation="EARLY">
+<h3>MITDB_203_BENEFIT_ap01955</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap01955.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap01955.png" alt="MITDB_203_BENEFIT_ap01955"></a><p>当前AP在底层为FP，位于最近专家参考标注前232.0ms，超出±150ms评价容差。模型p_real=0.2285、p_noise=0.7715，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="203" data-relation="EARLY">
+<h3>MITDB_203_BENEFIT_ap01957</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap01957.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap01957.png" alt="MITDB_203_BENEFIT_ap01957"></a><p>当前AP在底层为FP，位于最近专家参考标注前203.0ms，超出±150ms评价容差。模型p_real=0.1572、p_noise=0.8428，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="203" data-relation="LATE">
+<h3>MITDB_203_BENEFIT_ap02008</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注后超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap02008.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap02008.png" alt="MITDB_203_BENEFIT_ap02008"></a><p>当前AP在底层为FP，位于最近专家参考标注后416.0ms，超出±150ms评价容差。模型p_real=0.2129、p_noise=0.7871，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="203" data-relation="LATE">
+<h3>MITDB_203_BENEFIT_ap02012</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注后超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap02012.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap02012.png" alt="MITDB_203_BENEFIT_ap02012"></a><p>当前AP在底层为FP，位于最近专家参考标注后184.0ms，超出±150ms评价容差。模型p_real=0.2637、p_noise=0.7363，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="203" data-relation="EARLY">
+<h3>MITDB_203_BENEFIT_ap02014</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap02014.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap02014.png" alt="MITDB_203_BENEFIT_ap02014"></a><p>当前AP在底层为FP，位于最近专家参考标注前203.0ms，超出±150ms评价容差。模型p_real=0.1709、p_noise=0.8291，未通过原0.70噪声阈值；RR未评估此候选。该候选的模型节律输入引用了AP后超过100ms的位置，属于冻结模型离线画像。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="203" data-relation="EARLY">
+<h3>MITDB_203_BENEFIT_ap02016</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap02016.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap02016.png" alt="MITDB_203_BENEFIT_ap02016"></a><p>当前AP在底层为FP，位于最近专家参考标注前289.5ms，超出±150ms评价容差。模型p_real=0.2852、p_noise=0.7148，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="203" data-relation="LATE">
+<h3>MITDB_203_BENEFIT_ap02020</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注后超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap02020.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap02020.png" alt="MITDB_203_BENEFIT_ap02020"></a><p>当前AP在底层为FP，位于最近专家参考标注后318.5ms，超出±150ms评价容差。模型p_real=0.2422、p_noise=0.7578，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="203" data-relation="EARLY">
+<h3>MITDB_203_BENEFIT_ap02094</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap02094.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap02094.png" alt="MITDB_203_BENEFIT_ap02094"></a><p>当前AP在底层为FP，位于最近专家参考标注前351.0ms，超出±150ms评价容差。模型p_real=0.2637、p_noise=0.7363，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="203" data-relation="EARLY">
+<h3>MITDB_203_BENEFIT_ap02187</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap02187.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap02187.png" alt="MITDB_203_BENEFIT_ap02187"></a><p>当前AP在底层为FP，位于最近专家参考标注前198.5ms，超出±150ms评价容差。模型p_real=0.2910、p_noise=0.7090，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="203" data-relation="EARLY">
+<h3>MITDB_203_BENEFIT_ap02207</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap02207.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap02207.png" alt="MITDB_203_BENEFIT_ap02207"></a><p>当前AP在底层为FP，位于最近专家参考标注前186.5ms，超出±150ms评价容差。模型p_real=0.1934、p_noise=0.8066，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="203" data-relation="EARLY">
+<h3>MITDB_203_BENEFIT_ap02221</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap02221.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap02221.png" alt="MITDB_203_BENEFIT_ap02221"></a><p>当前AP在底层为FP，位于最近专家参考标注前448.0ms，超出±150ms评价容差。模型p_real=0.1855、p_noise=0.8145，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="203" data-relation="EARLY">
+<h3>MITDB_203_BENEFIT_ap02232</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap02232.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap02232.png" alt="MITDB_203_BENEFIT_ap02232"></a><p>当前AP在底层为FP，位于最近专家参考标注前198.5ms，超出±150ms评价容差。模型p_real=0.2324、p_noise=0.7676，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="203" data-relation="EARLY">
+<h3>MITDB_203_BENEFIT_ap02235</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap02235.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap02235.png" alt="MITDB_203_BENEFIT_ap02235"></a><p>当前AP在底层为FP，位于最近专家参考标注前279.5ms，超出±150ms评价容差。模型p_real=0.2217、p_noise=0.7783，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="203" data-relation="EARLY">
+<h3>MITDB_203_BENEFIT_ap02376</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap02376.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap02376.png" alt="MITDB_203_BENEFIT_ap02376"></a><p>当前AP在底层为FP，位于最近专家参考标注前221.0ms，超出±150ms评价容差。模型p_real=0.2461、p_noise=0.7539，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="203" data-relation="EARLY">
+<h3>MITDB_203_BENEFIT_ap02404</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap02404.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap02404.png" alt="MITDB_203_BENEFIT_ap02404"></a><p>当前AP在底层为FP，位于最近专家参考标注前227.0ms，超出±150ms评价容差。模型p_real=0.2637、p_noise=0.7363，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="203" data-relation="EARLY">
+<h3>MITDB_203_BENEFIT_ap02415</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap02415.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap02415.png" alt="MITDB_203_BENEFIT_ap02415"></a><p>当前AP在底层为FP，位于最近专家参考标注前217.0ms，超出±150ms评价容差。模型p_real=0.1885、p_noise=0.8115，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="203" data-relation="EARLY">
+<h3>MITDB_203_BENEFIT_ap02446</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap02446.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap02446.png" alt="MITDB_203_BENEFIT_ap02446"></a><p>当前AP在底层为FP，位于最近专家参考标注前267.5ms，超出±150ms评价容差。模型p_real=0.2031、p_noise=0.7969，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="203" data-relation="EARLY">
+<h3>MITDB_203_BENEFIT_ap02453</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap02453.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap02453.png" alt="MITDB_203_BENEFIT_ap02453"></a><p>当前AP在底层为FP，位于最近专家参考标注前341.0ms，超出±150ms评价容差。模型p_real=0.1943、p_noise=0.8057，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="203" data-relation="EARLY">
+<h3>MITDB_203_BENEFIT_ap02474</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap02474.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap02474.png" alt="MITDB_203_BENEFIT_ap02474"></a><p>当前AP在底层为FP，位于最近专家参考标注前167.5ms，超出±150ms评价容差。模型p_real=0.2217、p_noise=0.7783，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="214" data-relation="EARLY">
+<h3>MITDB_214_BENEFIT_ap00094</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/214/MITDB_214_BENEFIT_ap00094.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/214/MITDB_214_BENEFIT_ap00094.png" alt="MITDB_214_BENEFIT_ap00094"></a><p>当前AP在底层为FP，位于最近专家参考标注前285.0ms，超出±150ms评价容差。模型p_real=0.2324、p_noise=0.7676，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="222" data-relation="EARLY">
+<h3>MITDB_222_BENEFIT_ap01658</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/222/MITDB_222_BENEFIT_ap01658.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/222/MITDB_222_BENEFIT_ap01658.png" alt="MITDB_222_BENEFIT_ap01658"></a><p>当前AP在底层为FP，位于最近专家参考标注前319.0ms，超出±150ms评价容差。模型p_real=0.2002、p_noise=0.7998，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="222" data-relation="EARLY">
+<h3>MITDB_222_BENEFIT_ap01967</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/222/MITDB_222_BENEFIT_ap01967.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/222/MITDB_222_BENEFIT_ap01967.png" alt="MITDB_222_BENEFIT_ap01967"></a><p>当前AP在底层为FP，位于最近专家参考标注前175.0ms，超出±150ms评价容差。模型p_real=0.2676、p_noise=0.7324，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="222" data-relation="EARLY">
+<h3>MITDB_222_BENEFIT_ap01969</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/222/MITDB_222_BENEFIT_ap01969.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/222/MITDB_222_BENEFIT_ap01969.png" alt="MITDB_222_BENEFIT_ap01969"></a><p>当前AP在底层为FP，位于最近专家参考标注前398.0ms，超出±150ms评价容差。模型p_real=0.2676、p_noise=0.7324，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="222" data-relation="EARLY">
+<h3>MITDB_222_BENEFIT_ap01974</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/222/MITDB_222_BENEFIT_ap01974.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/222/MITDB_222_BENEFIT_ap01974.png" alt="MITDB_222_BENEFIT_ap01974"></a><p>当前AP在底层为FP，位于最近专家参考标注前422.0ms，超出±150ms评价容差。模型p_real=0.2559、p_noise=0.7441，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="228" data-relation="EARLY">
+<h3>MITDB_228_BENEFIT_ap00049</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00049.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00049.png" alt="MITDB_228_BENEFIT_ap00049"></a><p>当前AP在底层为FP，位于最近专家参考标注前460.0ms，超出±150ms评价容差。模型p_real=0.2637、p_noise=0.7363，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="228" data-relation="EARLY">
+<h3>MITDB_228_BENEFIT_ap00067</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00067.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00067.png" alt="MITDB_228_BENEFIT_ap00067"></a><p>当前AP在底层为FP，位于最近专家参考标注前211.5ms，超出±150ms评价容差。模型p_real=0.2461、p_noise=0.7539，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="228" data-relation="EARLY">
+<h3>MITDB_228_BENEFIT_ap00069</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00069.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00069.png" alt="MITDB_228_BENEFIT_ap00069"></a><p>当前AP在底层为FP，位于最近专家参考标注前348.0ms，超出±150ms评价容差。模型p_real=0.2773、p_noise=0.7227，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="228" data-relation="EARLY">
+<h3>MITDB_228_BENEFIT_ap00071</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00071.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00071.png" alt="MITDB_228_BENEFIT_ap00071"></a><p>当前AP在底层为FP，位于最近专家参考标注前350.0ms，超出±150ms评价容差。模型p_real=0.2422、p_noise=0.7578，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="228" data-relation="EARLY">
+<h3>MITDB_228_BENEFIT_ap00078</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00078.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00078.png" alt="MITDB_228_BENEFIT_ap00078"></a><p>当前AP在底层为FP，位于最近专家参考标注前347.5ms，超出±150ms评价容差。模型p_real=0.1895、p_noise=0.8105，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="228" data-relation="EARLY">
+<h3>MITDB_228_BENEFIT_ap00105</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00105.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00105.png" alt="MITDB_228_BENEFIT_ap00105"></a><p>当前AP在底层为FP，位于最近专家参考标注前223.0ms，超出±150ms评价容差。模型p_real=0.2070、p_noise=0.7930，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="228" data-relation="EARLY">
+<h3>MITDB_228_BENEFIT_ap00111</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00111.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00111.png" alt="MITDB_228_BENEFIT_ap00111"></a><p>当前AP在底层为FP，位于最近专家参考标注前455.5ms，超出±150ms评价容差。模型p_real=0.2197、p_noise=0.7803，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="228" data-relation="EARLY">
+<h3>MITDB_228_BENEFIT_ap00114</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00114.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00114.png" alt="MITDB_228_BENEFIT_ap00114"></a><p>当前AP在底层为FP，位于最近专家参考标注前211.5ms，超出±150ms评价容差。模型p_real=0.2295、p_noise=0.7705，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="228" data-relation="EARLY">
+<h3>MITDB_228_BENEFIT_ap00159</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00159.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00159.png" alt="MITDB_228_BENEFIT_ap00159"></a><p>当前AP在底层为FP，位于最近专家参考标注前265.0ms，超出±150ms评价容差。模型p_real=0.1943、p_noise=0.8057，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="228" data-relation="EARLY">
+<h3>MITDB_228_BENEFIT_ap00212</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00212.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00212.png" alt="MITDB_228_BENEFIT_ap00212"></a><p>当前AP在底层为FP，位于最近专家参考标注前175.5ms，超出±150ms评价容差。模型p_real=0.2070、p_noise=0.7930，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="228" data-relation="EARLY">
+<h3>MITDB_228_BENEFIT_ap00279</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00279.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00279.png" alt="MITDB_228_BENEFIT_ap00279"></a><p>当前AP在底层为FP，位于最近专家参考标注前171.5ms，超出±150ms评价容差。模型p_real=0.2490、p_noise=0.7510，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="228" data-relation="EARLY">
+<h3>MITDB_228_BENEFIT_ap00281</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00281.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00281.png" alt="MITDB_228_BENEFIT_ap00281"></a><p>当前AP在底层为FP，位于最近专家参考标注前302.0ms，超出±150ms评价容差。模型p_real=0.2070、p_noise=0.7930，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="228" data-relation="LATE">
+<h3>MITDB_228_BENEFIT_ap00325</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注后超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00325.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00325.png" alt="MITDB_228_BENEFIT_ap00325"></a><p>当前AP在底层为FP，位于最近专家参考标注后456.0ms，超出±150ms评价容差。模型p_real=0.1836、p_noise=0.8164，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="228" data-relation="LATE">
+<h3>MITDB_228_BENEFIT_ap00327</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注后超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00327.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00327.png" alt="MITDB_228_BENEFIT_ap00327"></a><p>当前AP在底层为FP，位于最近专家参考标注后320.5ms，超出±150ms评价容差。模型p_real=0.2256、p_noise=0.7744，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="228" data-relation="LATE">
+<h3>MITDB_228_BENEFIT_ap00330</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注后超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00330.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00330.png" alt="MITDB_228_BENEFIT_ap00330"></a><p>当前AP在底层为FP，位于最近专家参考标注后351.0ms，超出±150ms评价容差。模型p_real=0.2354、p_noise=0.7646，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="228" data-relation="EARLY">
+<h3>MITDB_228_BENEFIT_ap00331</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00331.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00331.png" alt="MITDB_228_BENEFIT_ap00331"></a><p>当前AP在底层为FP，位于最近专家参考标注前211.5ms，超出±150ms评价容差。模型p_real=0.2578、p_noise=0.7422，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="228" data-relation="EARLY">
+<h3>MITDB_228_BENEFIT_ap00333</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00333.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00333.png" alt="MITDB_228_BENEFIT_ap00333"></a><p>当前AP在底层为FP，位于最近专家参考标注前192.5ms，超出±150ms评价容差。模型p_real=0.2109、p_noise=0.7891，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="228" data-relation="EARLY">
+<h3>MITDB_228_BENEFIT_ap00335</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00335.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00335.png" alt="MITDB_228_BENEFIT_ap00335"></a><p>当前AP在底层为FP，位于最近专家参考标注前233.5ms，超出±150ms评价容差。模型p_real=0.1855、p_noise=0.8145，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="228" data-relation="EARLY">
+<h3>MITDB_228_BENEFIT_ap00337</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00337.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00337.png" alt="MITDB_228_BENEFIT_ap00337"></a><p>当前AP在底层为FP，位于最近专家参考标注前347.0ms，超出±150ms评价容差。模型p_real=0.2422、p_noise=0.7578，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="228" data-relation="EARLY">
+<h3>MITDB_228_BENEFIT_ap00349</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00349.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00349.png" alt="MITDB_228_BENEFIT_ap00349"></a><p>当前AP在底层为FP，位于最近专家参考标注前381.5ms，超出±150ms评价容差。模型p_real=0.2334、p_noise=0.7666，未通过原0.70噪声阈值；RR未评估此候选。该候选的模型节律输入引用了AP后超过100ms的位置，属于冻结模型离线画像。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="228" data-relation="EARLY">
+<h3>MITDB_228_BENEFIT_ap00372</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00372.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00372.png" alt="MITDB_228_BENEFIT_ap00372"></a><p>当前AP在底层为FP，位于最近专家参考标注前422.5ms，超出±150ms评价容差。模型p_real=0.2393、p_noise=0.7607，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="228" data-relation="EARLY">
+<h3>MITDB_228_BENEFIT_ap00388</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00388.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00388.png" alt="MITDB_228_BENEFIT_ap00388"></a><p>当前AP在底层为FP，位于最近专家参考标注前323.0ms，超出±150ms评价容差。模型p_real=0.2227、p_noise=0.7773，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="228" data-relation="EARLY">
+<h3>MITDB_228_BENEFIT_ap00414</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00414.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00414.png" alt="MITDB_228_BENEFIT_ap00414"></a><p>当前AP在底层为FP，位于最近专家参考标注前242.0ms，超出±150ms评价容差。模型p_real=0.1992、p_noise=0.8008，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="228" data-relation="EARLY">
+<h3>MITDB_228_BENEFIT_ap00415</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00415.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00415.png" alt="MITDB_228_BENEFIT_ap00415"></a><p>当前AP在底层为FP，位于最近专家参考标注前228.5ms，超出±150ms评价容差。模型p_real=0.1875、p_noise=0.8125，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="228" data-relation="EARLY">
+<h3>MITDB_228_BENEFIT_ap00417</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00417.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00417.png" alt="MITDB_228_BENEFIT_ap00417"></a><p>当前AP在底层为FP，位于最近专家参考标注前247.5ms，超出±150ms评价容差。模型p_real=0.2021、p_noise=0.7979，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="228" data-relation="EARLY">
+<h3>MITDB_228_BENEFIT_ap00418</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00418.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00418.png" alt="MITDB_228_BENEFIT_ap00418"></a><p>当前AP在底层为FP，位于最近专家参考标注前255.0ms，超出±150ms评价容差。模型p_real=0.2002、p_noise=0.7998，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="228" data-relation="EARLY">
+<h3>MITDB_228_BENEFIT_ap00420</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00420.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00420.png" alt="MITDB_228_BENEFIT_ap00420"></a><p>当前AP在底层为FP，位于最近专家参考标注前250.0ms，超出±150ms评价容差。模型p_real=0.2754、p_noise=0.7246，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="228" data-relation="EARLY">
+<h3>MITDB_228_BENEFIT_ap00426</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00426.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00426.png" alt="MITDB_228_BENEFIT_ap00426"></a><p>当前AP在底层为FP，位于最近专家参考标注前327.5ms，超出±150ms评价容差。模型p_real=0.2178、p_noise=0.7822，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="228" data-relation="EARLY">
+<h3>MITDB_228_BENEFIT_ap00429</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00429.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00429.png" alt="MITDB_228_BENEFIT_ap00429"></a><p>当前AP在底层为FP，位于最近专家参考标注前174.0ms，超出±150ms评价容差。模型p_real=0.2002、p_noise=0.7998，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="228" data-relation="EARLY">
+<h3>MITDB_228_BENEFIT_ap00433</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00433.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00433.png" alt="MITDB_228_BENEFIT_ap00433"></a><p>当前AP在底层为FP，位于最近专家参考标注前290.5ms，超出±150ms评价容差。模型p_real=0.1768、p_noise=0.8232，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="228" data-relation="EARLY">
+<h3>MITDB_228_BENEFIT_ap00435</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00435.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00435.png" alt="MITDB_228_BENEFIT_ap00435"></a><p>当前AP在底层为FP，位于最近专家参考标注前351.5ms，超出±150ms评价容差。模型p_real=0.1992、p_noise=0.8008，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="228" data-relation="LATE">
+<h3>MITDB_228_BENEFIT_ap00437</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注后超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00437.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00437.png" alt="MITDB_228_BENEFIT_ap00437"></a><p>当前AP在底层为FP，位于最近专家参考标注后507.0ms，超出±150ms评价容差。模型p_real=0.2090、p_noise=0.7910，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="228" data-relation="EARLY">
+<h3>MITDB_228_BENEFIT_ap00440</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00440.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00440.png" alt="MITDB_228_BENEFIT_ap00440"></a><p>当前AP在底层为FP，位于最近专家参考标注前226.5ms，超出±150ms评价容差。模型p_real=0.1904、p_noise=0.8096，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="228" data-relation="EARLY">
+<h3>MITDB_228_BENEFIT_ap00448</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00448.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00448.png" alt="MITDB_228_BENEFIT_ap00448"></a><p>当前AP在底层为FP，位于最近专家参考标注前253.5ms，超出±150ms评价容差。模型p_real=0.1660、p_noise=0.8340，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="228" data-relation="EARLY">
+<h3>MITDB_228_BENEFIT_ap00450</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00450.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00450.png" alt="MITDB_228_BENEFIT_ap00450"></a><p>当前AP在底层为FP，位于最近专家参考标注前483.0ms，超出±150ms评价容差。模型p_real=0.1748、p_noise=0.8252，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="228" data-relation="EARLY">
+<h3>MITDB_228_BENEFIT_ap00455</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00455.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00455.png" alt="MITDB_228_BENEFIT_ap00455"></a><p>当前AP在底层为FP，位于最近专家参考标注前228.5ms，超出±150ms评价容差。模型p_real=0.1719、p_noise=0.8281，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="228" data-relation="LATE">
+<h3>MITDB_228_BENEFIT_ap00456</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注后超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00456.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00456.png" alt="MITDB_228_BENEFIT_ap00456"></a><p>当前AP在底层为FP，位于最近专家参考标注后239.5ms，超出±150ms评价容差。模型p_real=0.2256、p_noise=0.7744，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="228" data-relation="EARLY">
+<h3>MITDB_228_BENEFIT_ap00458</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00458.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00458.png" alt="MITDB_228_BENEFIT_ap00458"></a><p>当前AP在底层为FP，位于最近专家参考标注前619.5ms，超出±150ms评价容差。模型p_real=0.1523、p_noise=0.8477，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="228" data-relation="EARLY">
+<h3>MITDB_228_BENEFIT_ap00461</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00461.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00461.png" alt="MITDB_228_BENEFIT_ap00461"></a><p>当前AP在底层为FP，位于最近专家参考标注前211.0ms，超出±150ms评价容差。模型p_real=0.1689、p_noise=0.8311，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="228" data-relation="EARLY">
+<h3>MITDB_228_BENEFIT_ap00463</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00463.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00463.png" alt="MITDB_228_BENEFIT_ap00463"></a><p>当前AP在底层为FP，位于最近专家参考标注前379.5ms，超出±150ms评价容差。模型p_real=0.1572、p_noise=0.8428，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="228" data-relation="LATE">
+<h3>MITDB_228_BENEFIT_ap00466</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注后超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00466.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00466.png" alt="MITDB_228_BENEFIT_ap00466"></a><p>当前AP在底层为FP，位于最近专家参考标注后487.5ms，超出±150ms评价容差。模型p_real=0.1777、p_noise=0.8223，未通过原0.70噪声阈值；RR未评估此候选。该候选的模型节律输入引用了AP后超过100ms的位置，属于冻结模型离线画像。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="228" data-relation="EARLY">
+<h3>MITDB_228_BENEFIT_ap00469</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00469.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00469.png" alt="MITDB_228_BENEFIT_ap00469"></a><p>当前AP在底层为FP，位于最近专家参考标注前478.5ms，超出±150ms评价容差。模型p_real=0.1953、p_noise=0.8047，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="228" data-relation="EARLY">
+<h3>MITDB_228_BENEFIT_ap00533</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00533.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00533.png" alt="MITDB_228_BENEFIT_ap00533"></a><p>当前AP在底层为FP，位于最近专家参考标注前224.0ms，超出±150ms评价容差。模型p_real=0.2559、p_noise=0.7441，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="228" data-relation="EARLY">
+<h3>MITDB_228_BENEFIT_ap00547</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00547.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00547.png" alt="MITDB_228_BENEFIT_ap00547"></a><p>当前AP在底层为FP，位于最近专家参考标注前241.5ms，超出±150ms评价容差。模型p_real=0.2451、p_noise=0.7549，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="228" data-relation="EARLY">
+<h3>MITDB_228_BENEFIT_ap00659</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00659.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00659.png" alt="MITDB_228_BENEFIT_ap00659"></a><p>当前AP在底层为FP，位于最近专家参考标注前239.0ms，超出±150ms评价容差。模型p_real=0.2598、p_noise=0.7402，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="228" data-relation="EARLY">
+<h3>MITDB_228_BENEFIT_ap00756</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00756.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00756.png" alt="MITDB_228_BENEFIT_ap00756"></a><p>当前AP在底层为FP，位于最近专家参考标注前172.5ms，超出±150ms评价容差。模型p_real=0.2520、p_noise=0.7480，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="228" data-relation="EARLY">
+<h3>MITDB_228_BENEFIT_ap01258</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01258.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01258.png" alt="MITDB_228_BENEFIT_ap01258"></a><p>当前AP在底层为FP，位于最近专家参考标注前188.0ms，超出±150ms评价容差。模型p_real=0.2061、p_noise=0.7939，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="228" data-relation="EARLY">
+<h3>MITDB_228_BENEFIT_ap01446</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01446.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01446.png" alt="MITDB_228_BENEFIT_ap01446"></a><p>当前AP在底层为FP，位于最近专家参考标注前361.5ms，超出±150ms评价容差。模型p_real=0.2695、p_noise=0.7305，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="228" data-relation="EARLY">
+<h3>MITDB_228_BENEFIT_ap01448</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01448.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01448.png" alt="MITDB_228_BENEFIT_ap01448"></a><p>当前AP在底层为FP，位于最近专家参考标注前399.5ms，超出±150ms评价容差。模型p_real=0.2119、p_noise=0.7881，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="228" data-relation="EARLY">
+<h3>MITDB_228_BENEFIT_ap01467</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01467.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01467.png" alt="MITDB_228_BENEFIT_ap01467"></a><p>当前AP在底层为FP，位于最近专家参考标注前315.5ms，超出±150ms评价容差。模型p_real=0.2559、p_noise=0.7441，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="228" data-relation="EARLY">
+<h3>MITDB_228_BENEFIT_ap01527</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01527.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01527.png" alt="MITDB_228_BENEFIT_ap01527"></a><p>当前AP在底层为FP，位于最近专家参考标注前234.5ms，超出±150ms评价容差。模型p_real=0.2305、p_noise=0.7695，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="228" data-relation="EARLY">
+<h3>MITDB_228_BENEFIT_ap01534</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01534.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01534.png" alt="MITDB_228_BENEFIT_ap01534"></a><p>当前AP在底层为FP，位于最近专家参考标注前211.0ms，超出±150ms评价容差。模型p_real=0.2695、p_noise=0.7305，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="228" data-relation="EARLY">
+<h3>MITDB_228_BENEFIT_ap01545</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01545.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01545.png" alt="MITDB_228_BENEFIT_ap01545"></a><p>当前AP在底层为FP，位于最近专家参考标注前171.5ms，超出±150ms评价容差。模型p_real=0.2656、p_noise=0.7344，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="228" data-relation="EARLY">
+<h3>MITDB_228_BENEFIT_ap01571</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01571.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01571.png" alt="MITDB_228_BENEFIT_ap01571"></a><p>当前AP在底层为FP，位于最近专家参考标注前356.0ms，超出±150ms评价容差。模型p_real=0.2061、p_noise=0.7939，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="228" data-relation="EARLY">
+<h3>MITDB_228_BENEFIT_ap01578</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01578.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01578.png" alt="MITDB_228_BENEFIT_ap01578"></a><p>当前AP在底层为FP，位于最近专家参考标注前203.0ms，超出±150ms评价容差。模型p_real=0.2422、p_noise=0.7578，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="228" data-relation="EARLY">
+<h3>MITDB_228_BENEFIT_ap01579</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01579.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01579.png" alt="MITDB_228_BENEFIT_ap01579"></a><p>当前AP在底层为FP，位于最近专家参考标注前188.0ms，超出±150ms评价容差。模型p_real=0.2227、p_noise=0.7773，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="228" data-relation="LATE">
+<h3>MITDB_228_BENEFIT_ap01580</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注后超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01580.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01580.png" alt="MITDB_228_BENEFIT_ap01580"></a><p>当前AP在底层为FP，位于最近专家参考标注后388.5ms，超出±150ms评价容差。模型p_real=0.1816、p_noise=0.8184，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="228" data-relation="EARLY">
+<h3>MITDB_228_BENEFIT_ap01581</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01581.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01581.png" alt="MITDB_228_BENEFIT_ap01581"></a><p>当前AP在底层为FP，位于最近专家参考标注前197.0ms，超出±150ms评价容差。模型p_real=0.1943、p_noise=0.8057，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="228" data-relation="EARLY">
+<h3>MITDB_228_BENEFIT_ap01582</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01582.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01582.png" alt="MITDB_228_BENEFIT_ap01582"></a><p>当前AP在底层为FP，位于最近专家参考标注前392.5ms，超出±150ms评价容差。模型p_real=0.1709、p_noise=0.8291，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="228" data-relation="EARLY">
+<h3>MITDB_228_BENEFIT_ap01586</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01586.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01586.png" alt="MITDB_228_BENEFIT_ap01586"></a><p>当前AP在底层为FP，位于最近专家参考标注前329.0ms，超出±150ms评价容差。模型p_real=0.1777、p_noise=0.8223，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="228" data-relation="EARLY">
+<h3>MITDB_228_BENEFIT_ap01589</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01589.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01589.png" alt="MITDB_228_BENEFIT_ap01589"></a><p>当前AP在底层为FP，位于最近专家参考标注前234.5ms，超出±150ms评价容差。模型p_real=0.2656、p_noise=0.7344，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="228" data-relation="LATE">
+<h3>MITDB_228_BENEFIT_ap01590</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注后超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01590.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01590.png" alt="MITDB_228_BENEFIT_ap01590"></a><p>当前AP在底层为FP，位于最近专家参考标注后412.0ms，超出±150ms评价容差。模型p_real=0.2236、p_noise=0.7764，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="228" data-relation="EARLY">
+<h3>MITDB_228_BENEFIT_ap01592</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01592.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01592.png" alt="MITDB_228_BENEFIT_ap01592"></a><p>当前AP在底层为FP，位于最近专家参考标注前349.0ms，超出±150ms评价容差。模型p_real=0.1855、p_noise=0.8145，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="228" data-relation="EARLY">
+<h3>MITDB_228_BENEFIT_ap01594</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01594.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01594.png" alt="MITDB_228_BENEFIT_ap01594"></a><p>当前AP在底层为FP，位于最近专家参考标注前189.0ms，超出±150ms评价容差。模型p_real=0.1572、p_noise=0.8428，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="228" data-relation="EARLY">
+<h3>MITDB_228_BENEFIT_ap01596</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01596.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01596.png" alt="MITDB_228_BENEFIT_ap01596"></a><p>当前AP在底层为FP，位于最近专家参考标注前367.5ms，超出±150ms评价容差。模型p_real=0.1787、p_noise=0.8213，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="228" data-relation="EARLY">
+<h3>MITDB_228_BENEFIT_ap01653</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01653.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01653.png" alt="MITDB_228_BENEFIT_ap01653"></a><p>当前AP在底层为FP，位于最近专家参考标注前472.0ms，超出±150ms评价容差。模型p_real=0.2080、p_noise=0.7920，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="228" data-relation="EARLY">
+<h3>MITDB_228_BENEFIT_ap01656</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01656.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01656.png" alt="MITDB_228_BENEFIT_ap01656"></a><p>当前AP在底层为FP，位于最近专家参考标注前541.5ms，超出±150ms评价容差。模型p_real=0.2129、p_noise=0.7871，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="228" data-relation="EARLY">
+<h3>MITDB_228_BENEFIT_ap01660</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01660.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01660.png" alt="MITDB_228_BENEFIT_ap01660"></a><p>当前AP在底层为FP，位于最近专家参考标注前174.5ms，超出±150ms评价容差。模型p_real=0.2910、p_noise=0.7090，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="228" data-relation="LATE">
+<h3>MITDB_228_BENEFIT_ap01661</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注后超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01661.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01661.png" alt="MITDB_228_BENEFIT_ap01661"></a><p>当前AP在底层为FP，位于最近专家参考标注后653.0ms，超出±150ms评价容差。模型p_real=0.2188、p_noise=0.7812，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="228" data-relation="EARLY">
+<h3>MITDB_228_BENEFIT_ap01667</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01667.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01667.png" alt="MITDB_228_BENEFIT_ap01667"></a><p>当前AP在底层为FP，位于最近专家参考标注前441.5ms，超出±150ms评价容差。模型p_real=0.1768、p_noise=0.8232，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="228" data-relation="EARLY">
+<h3>MITDB_228_BENEFIT_ap01688</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01688.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01688.png" alt="MITDB_228_BENEFIT_ap01688"></a><p>当前AP在底层为FP，位于最近专家参考标注前461.5ms，超出±150ms评价容差。模型p_real=0.2041、p_noise=0.7959，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="228" data-relation="EARLY">
+<h3>MITDB_228_BENEFIT_ap01691</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01691.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01691.png" alt="MITDB_228_BENEFIT_ap01691"></a><p>当前AP在底层为FP，位于最近专家参考标注前372.0ms，超出±150ms评价容差。模型p_real=0.1826、p_noise=0.8174，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="228" data-relation="EARLY">
+<h3>MITDB_228_BENEFIT_ap01693</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01693.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01693.png" alt="MITDB_228_BENEFIT_ap01693"></a><p>当前AP在底层为FP，位于最近专家参考标注前157.5ms，超出±150ms评价容差。模型p_real=0.2070、p_noise=0.7930，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="228" data-relation="EARLY">
+<h3>MITDB_228_BENEFIT_ap01695</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01695.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01695.png" alt="MITDB_228_BENEFIT_ap01695"></a><p>当前AP在底层为FP，位于最近专家参考标注前256.0ms，超出±150ms评价容差。模型p_real=0.2090、p_noise=0.7910，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="228" data-relation="EARLY">
+<h3>MITDB_228_BENEFIT_ap01699</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01699.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01699.png" alt="MITDB_228_BENEFIT_ap01699"></a><p>当前AP在底层为FP，位于最近专家参考标注前375.5ms，超出±150ms评价容差。模型p_real=0.1729、p_noise=0.8271，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="228" data-relation="EARLY">
+<h3>MITDB_228_BENEFIT_ap01702</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01702.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01702.png" alt="MITDB_228_BENEFIT_ap01702"></a><p>当前AP在底层为FP，位于最近专家参考标注前572.5ms，超出±150ms评价容差。模型p_real=0.1904、p_noise=0.8096，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="228" data-relation="EARLY">
+<h3>MITDB_228_BENEFIT_ap01711</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01711.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01711.png" alt="MITDB_228_BENEFIT_ap01711"></a><p>当前AP在底层为FP，位于最近专家参考标注前243.5ms，超出±150ms评价容差。模型p_real=0.1826、p_noise=0.8174，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="228" data-relation="EARLY">
+<h3>MITDB_228_BENEFIT_ap01712</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01712.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01712.png" alt="MITDB_228_BENEFIT_ap01712"></a><p>当前AP在底层为FP，位于最近专家参考标注前208.5ms，超出±150ms评价容差。模型p_real=0.1670、p_noise=0.8330，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="228" data-relation="EARLY">
+<h3>MITDB_228_BENEFIT_ap01717</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01717.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01717.png" alt="MITDB_228_BENEFIT_ap01717"></a><p>当前AP在底层为FP，位于最近专家参考标注前315.0ms，超出±150ms评价容差。模型p_real=0.1943、p_noise=0.8057，未通过原0.70噪声阈值；RR未评估此候选。该候选的模型节律输入引用了AP后超过100ms的位置，属于冻结模型离线画像。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="228" data-relation="EARLY">
+<h3>MITDB_228_BENEFIT_ap01719</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01719.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01719.png" alt="MITDB_228_BENEFIT_ap01719"></a><p>当前AP在底层为FP，位于最近专家参考标注前422.5ms，超出±150ms评价容差。模型p_real=0.2949、p_noise=0.7051，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="228" data-relation="EARLY">
+<h3>MITDB_228_BENEFIT_ap01721</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01721.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01721.png" alt="MITDB_228_BENEFIT_ap01721"></a><p>当前AP在底层为FP，位于最近专家参考标注前229.5ms，超出±150ms评价容差。模型p_real=0.2148、p_noise=0.7852，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="228" data-relation="EARLY">
+<h3>MITDB_228_BENEFIT_ap01723</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01723.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01723.png" alt="MITDB_228_BENEFIT_ap01723"></a><p>当前AP在底层为FP，位于最近专家参考标注前279.0ms，超出±150ms评价容差。模型p_real=0.1885、p_noise=0.8115，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="228" data-relation="LATE">
+<h3>MITDB_228_BENEFIT_ap01725</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注后超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01725.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01725.png" alt="MITDB_228_BENEFIT_ap01725"></a><p>当前AP在底层为FP，位于最近专家参考标注后250.5ms，超出±150ms评价容差。模型p_real=0.2480、p_noise=0.7520，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="228" data-relation="EARLY">
+<h3>MITDB_228_BENEFIT_ap01726</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01726.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01726.png" alt="MITDB_228_BENEFIT_ap01726"></a><p>当前AP在底层为FP，位于最近专家参考标注前220.0ms，超出±150ms评价容差。模型p_real=0.2158、p_noise=0.7842，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="228" data-relation="EARLY">
+<h3>MITDB_228_BENEFIT_ap01728</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01728.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01728.png" alt="MITDB_228_BENEFIT_ap01728"></a><p>当前AP在底层为FP，位于最近专家参考标注前249.0ms，超出±150ms评价容差。模型p_real=0.1924、p_noise=0.8076，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="228" data-relation="EARLY">
+<h3>MITDB_228_BENEFIT_ap01730</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01730.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01730.png" alt="MITDB_228_BENEFIT_ap01730"></a><p>当前AP在底层为FP，位于最近专家参考标注前491.0ms，超出±150ms评价容差。模型p_real=0.2158、p_noise=0.7842，未通过原0.70噪声阈值；RR未评估此候选。该候选的模型节律输入引用了AP后超过100ms的位置，属于冻结模型离线画像。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="228" data-relation="EARLY">
+<h3>MITDB_228_BENEFIT_ap01731</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01731.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01731.png" alt="MITDB_228_BENEFIT_ap01731"></a><p>当前AP在底层为FP，位于最近专家参考标注前320.5ms，超出±150ms评价容差。模型p_real=0.2197、p_noise=0.7803，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="228" data-relation="EARLY">
+<h3>MITDB_228_BENEFIT_ap01733</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01733.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01733.png" alt="MITDB_228_BENEFIT_ap01733"></a><p>当前AP在底层为FP，位于最近专家参考标注前422.0ms，超出±150ms评价容差。模型p_real=0.2539、p_noise=0.7461，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="228" data-relation="LATE">
+<h3>MITDB_228_BENEFIT_ap01756</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注后超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01756.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01756.png" alt="MITDB_228_BENEFIT_ap01756"></a><p>当前AP在底层为FP，位于最近专家参考标注后473.0ms，超出±150ms评价容差。模型p_real=0.2256、p_noise=0.7744，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="228" data-relation="EARLY">
+<h3>MITDB_228_BENEFIT_ap01758</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01758.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01758.png" alt="MITDB_228_BENEFIT_ap01758"></a><p>当前AP在底层为FP，位于最近专家参考标注前202.0ms，超出±150ms评价容差。模型p_real=0.1943、p_noise=0.8057，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="228" data-relation="EARLY">
+<h3>MITDB_228_BENEFIT_ap01760</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01760.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01760.png" alt="MITDB_228_BENEFIT_ap01760"></a><p>当前AP在底层为FP，位于最近专家参考标注前424.5ms，超出±150ms评价容差。模型p_real=0.2031、p_noise=0.7969，未通过原0.70噪声阈值；RR未评估此候选。该候选的模型节律输入引用了AP后超过100ms的位置，属于冻结模型离线画像。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="228" data-relation="LATE">
+<h3>MITDB_228_BENEFIT_ap01762</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注后超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01762.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01762.png" alt="MITDB_228_BENEFIT_ap01762"></a><p>当前AP在底层为FP，位于最近专家参考标注后330.0ms，超出±150ms评价容差。模型p_real=0.2119、p_noise=0.7881，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="FP_TO_TP_REASSIGNED" data-record="228" data-relation="REASSIGNED">
+<h3>MITDB_228_BENEFIT_ap01764</h3><div class="tag">优势｜FP重新匹配为TP（候选保留） · FP重新匹配为TP</div>
+<a href="images/FP_TO_TP_REASSIGNED/228/MITDB_228_BENEFIT_ap01764.png" target="_blank"><img loading="lazy" src="images/FP_TO_TP_REASSIGNED/228/MITDB_228_BENEFIT_ap01764.png" alt="MITDB_228_BENEFIT_ap01764"></a><p>当前AP在底层被评价为FP，但未被模型或RR删除；原匹配AP#1763被模型删除后，当前AP以p_real=0.4453重新匹配专家事件1704（N，相对AP-34.0ms）。该专家事件在各阶段均检出，这是候选匹配变化，不是新增检出一个心搏。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="228" data-relation="LATE">
+<h3>MITDB_228_BENEFIT_ap01765</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注后超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01765.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01765.png" alt="MITDB_228_BENEFIT_ap01765"></a><p>当前AP在底层为FP，位于最近专家参考标注后360.5ms，超出±150ms评价容差。模型p_real=0.2256、p_noise=0.7744，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="228" data-relation="LATE">
+<h3>MITDB_228_BENEFIT_ap01768</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注后超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01768.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01768.png" alt="MITDB_228_BENEFIT_ap01768"></a><p>当前AP在底层为FP，位于最近专家参考标注后484.0ms，超出±150ms评价容差。模型p_real=0.2305、p_noise=0.7695，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="228" data-relation="EARLY">
+<h3>MITDB_228_BENEFIT_ap01769</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01769.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01769.png" alt="MITDB_228_BENEFIT_ap01769"></a><p>当前AP在底层为FP，位于最近专家参考标注前368.0ms，超出±150ms评价容差。模型p_real=0.2500、p_noise=0.7500，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="228" data-relation="EARLY">
+<h3>MITDB_228_BENEFIT_ap01785</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01785.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01785.png" alt="MITDB_228_BENEFIT_ap01785"></a><p>当前AP在底层为FP，位于最近专家参考标注前249.5ms，超出±150ms评价容差。模型p_real=0.1748、p_noise=0.8252，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="228" data-relation="EARLY">
+<h3>MITDB_228_BENEFIT_ap01789</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01789.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01789.png" alt="MITDB_228_BENEFIT_ap01789"></a><p>当前AP在底层为FP，位于最近专家参考标注前243.5ms，超出±150ms评价容差。模型p_real=0.2773、p_noise=0.7227，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="228" data-relation="EARLY">
+<h3>MITDB_228_BENEFIT_ap01791</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01791.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01791.png" alt="MITDB_228_BENEFIT_ap01791"></a><p>当前AP在底层为FP，位于最近专家参考标注前284.0ms，超出±150ms评价容差。模型p_real=0.2393、p_noise=0.7607，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="228" data-relation="EARLY">
+<h3>MITDB_228_BENEFIT_ap01794</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01794.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01794.png" alt="MITDB_228_BENEFIT_ap01794"></a><p>当前AP在底层为FP，位于最近专家参考标注前202.5ms，超出±150ms评价容差。模型p_real=0.2090、p_noise=0.7910，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="228" data-relation="EARLY">
+<h3>MITDB_228_BENEFIT_ap01915</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01915.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01915.png" alt="MITDB_228_BENEFIT_ap01915"></a><p>当前AP在底层为FP，位于最近专家参考标注前562.0ms，超出±150ms评价容差。模型p_real=0.2480、p_noise=0.7520，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="228" data-relation="EARLY">
+<h3>MITDB_228_BENEFIT_ap01918</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01918.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01918.png" alt="MITDB_228_BENEFIT_ap01918"></a><p>当前AP在底层为FP，位于最近专家参考标注前407.0ms，超出±150ms评价容差。模型p_real=0.2295、p_noise=0.7705，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="228" data-relation="LATE">
+<h3>MITDB_228_BENEFIT_ap01925</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注后超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01925.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01925.png" alt="MITDB_228_BENEFIT_ap01925"></a><p>当前AP在底层为FP，位于最近专家参考标注后415.5ms，超出±150ms评价容差。模型p_real=0.2676、p_noise=0.7324，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="228" data-relation="EARLY">
+<h3>MITDB_228_BENEFIT_ap01929</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01929.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01929.png" alt="MITDB_228_BENEFIT_ap01929"></a><p>当前AP在底层为FP，位于最近专家参考标注前158.0ms，超出±150ms评价容差。模型p_real=0.2217、p_noise=0.7783，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="228" data-relation="EARLY">
+<h3>MITDB_228_BENEFIT_ap01939</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01939.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01939.png" alt="MITDB_228_BENEFIT_ap01939"></a><p>当前AP在底层为FP，位于最近专家参考标注前273.5ms，超出±150ms评价容差。模型p_real=0.1895、p_noise=0.8105，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="228" data-relation="LATE">
+<h3>MITDB_228_BENEFIT_ap01940</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注后超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01940.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01940.png" alt="MITDB_228_BENEFIT_ap01940"></a><p>当前AP在底层为FP，位于最近专家参考标注后433.0ms，超出±150ms评价容差。模型p_real=0.2227、p_noise=0.7773，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="228" data-relation="EARLY">
+<h3>MITDB_228_BENEFIT_ap01942</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01942.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01942.png" alt="MITDB_228_BENEFIT_ap01942"></a><p>当前AP在底层为FP，位于最近专家参考标注前399.5ms，超出±150ms评价容差。模型p_real=0.2520、p_noise=0.7480，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="228" data-relation="EARLY">
+<h3>MITDB_228_BENEFIT_ap01944</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01944.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01944.png" alt="MITDB_228_BENEFIT_ap01944"></a><p>当前AP在底层为FP，位于最近专家参考标注前291.5ms，超出±150ms评价容差。模型p_real=0.2002、p_noise=0.7998，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="228" data-relation="EARLY">
+<h3>MITDB_228_BENEFIT_ap01946</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01946.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01946.png" alt="MITDB_228_BENEFIT_ap01946"></a><p>当前AP在底层为FP，位于最近专家参考标注前252.0ms，超出±150ms评价容差。模型p_real=0.1992、p_noise=0.8008，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="228" data-relation="EARLY">
+<h3>MITDB_228_BENEFIT_ap02020</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap02020.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap02020.png" alt="MITDB_228_BENEFIT_ap02020"></a><p>当前AP在底层为FP，位于最近专家参考标注前323.5ms，超出±150ms评价容差。模型p_real=0.2930、p_noise=0.7070，未通过原0.70噪声阈值；RR未评估此候选。</p></article>
+<article data-type="MODEL_FP_REMOVED" data-record="233" data-relation="EARLY">
+<h3>MITDB_233_BENEFIT_ap01224</h3><div class="tag">优势｜模型删除底层FP · 最近专家标注前超过150ms</div>
+<a href="images/MODEL_FP_REMOVED/233/MITDB_233_BENEFIT_ap01224.png" target="_blank"><img loading="lazy" src="images/MODEL_FP_REMOVED/233/MITDB_233_BENEFIT_ap01224.png" alt="MITDB_233_BENEFIT_ap01224"></a><p>当前AP在底层为FP，位于最近专家参考标注前214.0ms，超出±150ms评价容差。模型p_real=0.2637、p_noise=0.7363，未通过原0.70噪声阈值；RR未评估此候选。</p></article></section></main><script>
+const articles=[...document.querySelectorAll('article')];function filter(){const t=document.getElementById('type').value,r=document.getElementById('record').value,c=document.getElementById('relation').value,q=document.getElementById('query').value.toLowerCase();let n=0;
+for(const a of articles){const show=(!t||a.dataset.type===t)&&(!r||a.dataset.record===r)&&(!c||a.dataset.relation===c)&&(!q||a.textContent.toLowerCase().includes(q));a.hidden=!show;if(show)n++;}document.getElementById('count').textContent=`显示 ${n} / 256 例`;}
+for(const id of ['type','record','relation','query'])document.getElementById(id).addEventListener('input',filter);filter();</script></html>

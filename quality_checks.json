@@ -1,0 +1,24 @@
+{
+  "completed_utc": "2026-10-17T09:23:59.745872+00:00",
+  "status": "PASSED",
+  "unique_cases": 256,
+  "PNG_images_including_copies": 263,
+  "report_SVG": 5,
+  "image_dimensions": {
+    "2015x1638": 256
+  },
+  "gallery_cards": 256,
+  "gallery_links": "all local targets exist",
+  "matching_counts": "227 direct model removals + 23 RR removals + 6 FP-to-TP reassignments",
+  "paired_FN_context_images": 2,
+  "model_rhythm_position_exceeds_100ms_cases": 9,
+  "environment": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "matplotlib": "3.10.8",
+    "pillow": "12.3.0"
+  },
+  "verification_scope": "Input wavepack registry and CRC, frozen table matching, rule conditions, all PNG CRCs, SVG XML, gallery inventory and links",
+  "visual_QA": "Representative layouts inspected; morphology is not automatically diagnosed",
+  "gpu_or_model_inference": false
+}

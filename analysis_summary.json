@@ -1,0 +1,43 @@
+{
+  "status": "COMPLETE_256_BENEFIT_CASES",
+  "source_zip_sha256": "47302cfd5e912df0eee3c4d6aacdce3babb63bcf2dd15bfd8d989b1f6ed956b9",
+  "counts": {
+    "total_direct_fp_removed": 250,
+    "total_fp_to_tp_reassigned": 6,
+    "total_tp_to_fp_reassigned": 0,
+    "total_net_fp_reduction": 256,
+    "model_direct_fp_removed": 227,
+    "model_fp_to_tp_reassigned": 6,
+    "model_tp_to_fp_reassigned": 0,
+    "model_net_fp_reduction": 233,
+    "rr_direct_fp_removed": 23,
+    "rr_fp_to_tp_reassigned": 0,
+    "rr_tp_to_fp_reassigned": 0,
+    "rr_net_fp_reduction": 23,
+    "benefit_cases": 256
+  },
+  "benefit_types": {
+    "RR_FP_REMOVED": 23,
+    "MODEL_FP_REMOVED": 227,
+    "FP_TO_TP_REASSIGNED": 6
+  },
+  "relation_categories": {
+    "EARLY": 198,
+    "LATE": 47,
+    "REASSIGNED": 6,
+    "DUP_TP": 3,
+    "DUP_FN": 2
+  },
+  "RR_rules": {
+    "RULE1_LOW_CONF_SHORT_RR": 19,
+    "RULE2_COOLDOWN_NOISE": 4
+  },
+  "rr_input_exceeds_100ms": 9,
+  "duplicate_removed_with_added_FN": [
+    "MITDB_105_BENEFIT_ap01906",
+    "MITDB_203_BENEFIT_ap00891"
+  ],
+  "paired_FN_images": 2,
+  "weight_sha256": "3a6b56951bcbf213eca1ecddc1344cbc637a51ca63f14a85051735e8ec028c19",
+  "new_inference_performed": false
+}

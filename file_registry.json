@@ -1,0 +1,1442 @@
+{
+  "status": "COMPLETE_256_BENEFIT_CASES",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 5097,
+      "sha256": "14c712d96c771d9a234da9f998265747b1b6c6cfdd56cd4fba70ffe00f239be8"
+    },
+    {
+      "path": "analysis_summary.json",
+      "bytes": 1197,
+      "sha256": "296c1ceefb2827ce6a8aab5dc6a8c4db7e7b5c82a7d46875c8735775fc90a574"
+    },
+    {
+      "path": "assets/plot_font.ttf",
+      "bytes": 3556308,
+      "sha256": "ee38813ea00c3e32add4268fff7fff9e39417b4913cb13be2415164a47807cc2"
+    },
+    {
+      "path": "audit/all_records_results.csv",
+      "bytes": 2064,
+      "sha256": "660e048f5c8f025a3a0fe637e0f43ae0fff35d2dd8ec1b69d8cf8d3e10d37107"
+    },
+    {
+      "path": "audit/benefit_counts_by_record.csv",
+      "bytes": 1282,
+      "sha256": "517b31256af3fe8af14ebc5ea315163a16beb87e18aa0394ce1d4e8b02f665f3"
+    },
+    {
+      "path": "audit/pack_summary.json",
+      "bytes": 1227,
+      "sha256": "5b11ad5d7a78ee6bc8782042453a40841f02954735827ec6098c0cc5de546f30"
+    },
+    {
+      "path": "audit/source_summary.json",
+      "bytes": 37539,
+      "sha256": "1df9a037f52314bec91f132e6ed9f9a2b1490d7ad89535d49ae9ec975c5c6a51"
+    },
+    {
+      "path": "benefit_relation_counts.csv",
+      "bytes": 265,
+      "sha256": "20d69b941aaf4e4c590db2f00551c6025d7b0a5ae2ca0d6c614ef28d99882a35"
+    },
+    {
+      "path": "benefit_stage_relation_counts.csv",
+      "bytes": 608,
+      "sha256": "ddfbab99606d0fdcc1011036aa26cfbfc387dc8290085de84b481640000242c1"
+    },
+    {
+      "path": "benefit_type_counts.csv",
+      "bytes": 174,
+      "sha256": "61acd20c0507de8311f8050f4d42439d2f1654f836db6babd8cb19408906a15f"
+    },
+    {
+      "path": "case_descriptions.csv",
+      "bytes": 264370,
+      "sha256": "18408e266fa0dc95b283509ef7bdf0b8866b7ac1a68f17680a8f9f9bb575aaa7"
+    },
+    {
+      "path": "export_benefit_wavepack.py",
+      "bytes": 18567,
+      "sha256": "67a2fcae4bd6ce79a3b1257a0c43a18b44643eed171c01c156ad7fc1b1979df3"
+    },
+    {
+      "path": "images/FP_TO_TP_REASSIGNED/105/MITDB_105_BENEFIT_ap01704.png",
+      "bytes": 494092,
+      "sha256": "63183a84901bba243ef7bb3bc35afcc6b2efbbde75b3d08f6bc65616a471fe6e"
+    },
+    {
+      "path": "images/FP_TO_TP_REASSIGNED/203/MITDB_203_BENEFIT_ap00067.png",
+      "bytes": 510584,
+      "sha256": "4556bd817a0331a947bd1b3a47a4f665c444c161f6d9f7c67e1c0d57a293b272"
+    },
+    {
+      "path": "images/FP_TO_TP_REASSIGNED/203/MITDB_203_BENEFIT_ap00170.png",
+      "bytes": 487325,
+      "sha256": "fa11b079f581b4da107f44bc288186567f680ec2080be9f9c8547010e2362925"
+    },
+    {
+      "path": "images/FP_TO_TP_REASSIGNED/203/MITDB_203_BENEFIT_ap00852.png",
+      "bytes": 462058,
+      "sha256": "e70417dcaba02faa1775c5c31e4b1355680882253658b9d89d92ffc9f3d57388"
+    },
+    {
+      "path": "images/FP_TO_TP_REASSIGNED/203/MITDB_203_BENEFIT_ap01809.png",
+      "bytes": 475737,
+      "sha256": "3668c5af6e4677e131ce23c21e538f8e7f52362464001da1c884409340e4fec7"
+    },
+    {
+      "path": "images/FP_TO_TP_REASSIGNED/228/MITDB_228_BENEFIT_ap01764.png",
+      "bytes": 474718,
+      "sha256": "6aff8b3b50bd0a2a1647154d05eacb3161256a405a738204ab41133cbf369f1d"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/105/MITDB_105_BENEFIT_ap01206.png",
+      "bytes": 467299,
+      "sha256": "02bce0b2b0c54a19dff57c85fb3671ca7129269ad8a104a2d8be4fd45fb1c24d"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/105/MITDB_105_BENEFIT_ap01476.png",
+      "bytes": 467399,
+      "sha256": "fb84bffb3f008a0be14be126c17ceec2fc20d872a535bca8afea247076e6947a"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/105/MITDB_105_BENEFIT_ap01688.png",
+      "bytes": 456302,
+      "sha256": "a3a5cda8df891567d45f2895fa00545e17ce83c22da8803126d8502548aa9eb5"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/105/MITDB_105_BENEFIT_ap01692.png",
+      "bytes": 449011,
+      "sha256": "50c2260c81579fd25c59ec3e40d3a0040a3889961a28824613b924a9785c296b"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/105/MITDB_105_BENEFIT_ap01701.png",
+      "bytes": 479139,
+      "sha256": "6085f80879bcac2556e2a91ab4c1919baef3fd516c133c81aae92a703743abe9"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/105/MITDB_105_BENEFIT_ap01705.png",
+      "bytes": 491767,
+      "sha256": "cfe101daede1d7d0380472ffc2792510129d69d8f4aa5de87895f37866828a22"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/105/MITDB_105_BENEFIT_ap01706.png",
+      "bytes": 491996,
+      "sha256": "9e83fb63a7d7fc4e50ba4b740142d4baa36a26608fbdc3795f12d306cdb8ec01"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/105/MITDB_105_BENEFIT_ap01713.png",
+      "bytes": 466442,
+      "sha256": "eca7e5882d8daaef55ddf88bd5aa2a3c8f0ac14158e57ebb0bf5050446b59cbf"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/105/MITDB_105_BENEFIT_ap01727.png",
+      "bytes": 470685,
+      "sha256": "0c232e07bec33eccb5aa26779f47064850930ed376d973141df091526761b187"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/105/MITDB_105_BENEFIT_ap01732.png",
+      "bytes": 487143,
+      "sha256": "dd3edd668a991bb303e5971e8f78fbade9d1681fe99669a8cf78c18a5625cf1f"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/105/MITDB_105_BENEFIT_ap01755.png",
+      "bytes": 460962,
+      "sha256": "0841148ca8ab9304ce5323569a14c60bc23fb79b024fdd34ff3902dda21de353"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/105/MITDB_105_BENEFIT_ap01760.png",
+      "bytes": 466048,
+      "sha256": "7f973ede2fe6b1bd3530ff52e1358105f78e473bef07b83a3d4aa3b325210799"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/105/MITDB_105_BENEFIT_ap01862.png",
+      "bytes": 507751,
+      "sha256": "7033f673e901539cf8070d935f588a517eb1a844fdc4b107ead7cc565fe4ffd7"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/105/MITDB_105_BENEFIT_ap01879.png",
+      "bytes": 488313,
+      "sha256": "15a0302133adf5a2cb19b7492df8b659cf8e850f5a48f9bc197984c860228b21"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/105/MITDB_105_BENEFIT_ap01883.png",
+      "bytes": 505773,
+      "sha256": "7e5fe8216e6d9189cb4a28f8d59c494602f4dd0ca46c74042becb3852dca10ab"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/105/MITDB_105_BENEFIT_ap01887.png",
+      "bytes": 495952,
+      "sha256": "07c1c508264837e368ed8829d829f52a6944cfc16c7b34056cb52027c2125128"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/105/MITDB_105_BENEFIT_ap01889.png",
+      "bytes": 504736,
+      "sha256": "a2abd8cf4f6daf895e648ea5e41b19c682a1d0ad108bf1e54143ef7a4cb4fda7"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/105/MITDB_105_BENEFIT_ap01894.png",
+      "bytes": 513676,
+      "sha256": "ce987ce5ee58c9313c0e7b72331550e7cacc9c080ef130071a14fea5df96b32c"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/105/MITDB_105_BENEFIT_ap01901.png",
+      "bytes": 506049,
+      "sha256": "6572b16fdae6a94225f97babab9e90fe7d5b069ce66fc536264b7d8154e49748"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/105/MITDB_105_BENEFIT_ap01903.png",
+      "bytes": 506870,
+      "sha256": "bed3ecc8d6390303113bfdb0abfd1b5963a4e6f989c8465ff59a5ce583abe36d"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/105/MITDB_105_BENEFIT_ap01906.png",
+      "bytes": 506972,
+      "sha256": "b551b0ca0c92a92a7f86607b1685d6fd8bbe59b21dcb84c2d1c92d7407a09792"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/105/MITDB_105_BENEFIT_ap01920.png",
+      "bytes": 497916,
+      "sha256": "81c7fb381771ea935734536c070f8a9a6f88c66e9dbd19a8db15538cd2a50f76"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/105/MITDB_105_BENEFIT_ap02392.png",
+      "bytes": 471262,
+      "sha256": "8b0161e59d723bf764eec9ece55b660f49388ef019d5dd38773c2251d1883db2"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/105/MITDB_105_BENEFIT_ap02443.png",
+      "bytes": 449849,
+      "sha256": "a771f1e153cb30a7a9e94a7e6492452a152a7092dd91a60ea0f27eb1c64d17dc"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/105/MITDB_105_BENEFIT_ap02453.png",
+      "bytes": 500695,
+      "sha256": "a61d1c84e74b30d74f5e360b24834a585d018d981868aec17b455ff2422b1489"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/105/MITDB_105_BENEFIT_ap02455.png",
+      "bytes": 492938,
+      "sha256": "f1c14583c8130c897cb7716f1295b43c8be744138a2cfbf9cefa683626b0b55a"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/105/MITDB_105_BENEFIT_ap02491.png",
+      "bytes": 452349,
+      "sha256": "e41df8d0a3d5fa803f7cbaa23fa32b9ce6078de340a03de3d0afe4b6f72c8e7b"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/111/MITDB_111_BENEFIT_ap00274.png",
+      "bytes": 474261,
+      "sha256": "e731738dd6f8dcf1a06d2d5dc2cf5316cf7c950733c17342d12af8b7f95f8842"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/117/MITDB_117_BENEFIT_ap00606.png",
+      "bytes": 463827,
+      "sha256": "b81643739ab4323bd17e55cada5314392eda26e2c4bc0dae895232a12981bfb9"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/121/MITDB_121_BENEFIT_ap00901.png",
+      "bytes": 422402,
+      "sha256": "1ec369e88b85c8eb00fe1a2cbf0a0e4ffab68abd4b86233f229f2cb2a354a28f"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/121/MITDB_121_BENEFIT_ap01538.png",
+      "bytes": 466945,
+      "sha256": "50cf2e3000cf2c39765001d6c7587c54432289a9863fb5c7a86e46bd49f6b8cc"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/121/MITDB_121_BENEFIT_ap01566.png",
+      "bytes": 470525,
+      "sha256": "489f0dca513bafb3c8e62354d7523859f1e4259fb8a14924f0c376debf0afc14"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/121/MITDB_121_BENEFIT_ap01631.png",
+      "bytes": 453910,
+      "sha256": "eb2ba9a11cac22ec9129a2c5447e85aca45ab8b05c8932099a3a4622119230c9"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/121/MITDB_121_BENEFIT_ap01634.png",
+      "bytes": 459924,
+      "sha256": "5aeb39e085a491b79042e6cb238a72eda146d300c7264da235545320c0b4bfec"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/121/MITDB_121_BENEFIT_ap01640.png",
+      "bytes": 462501,
+      "sha256": "2f709cdcac6518c438be3c95521f55382ec3e93c39750f8c062c2e6bdb62896d"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/121/MITDB_121_BENEFIT_ap01750.png",
+      "bytes": 457252,
+      "sha256": "8b6812e8e616885a0c0c6c048f5ff9e47fdda306b4bb3b1da96707735b87aa04"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/200/MITDB_200_BENEFIT_ap00209.png",
+      "bytes": 451749,
+      "sha256": "33c337594a106df25a62afd9438677d0d08def56855031081a6e4f9ee5a30297"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/200/MITDB_200_BENEFIT_ap00226.png",
+      "bytes": 479724,
+      "sha256": "a931d703a55c210b93a059a17c35fd7520cab9d02b18846d9cd6a9a543c5353f"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/200/MITDB_200_BENEFIT_ap00303.png",
+      "bytes": 448817,
+      "sha256": "5173c714a49194daa2ee4f1bd283d4326102de5d23c5b2f11e4e7837a14b5858"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/200/MITDB_200_BENEFIT_ap00327.png",
+      "bytes": 487057,
+      "sha256": "9d6a7dbf9bd7d83d47f3fa3f08a0358b8fd83a2a40c5300b27467ae677610423"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/200/MITDB_200_BENEFIT_ap00395.png",
+      "bytes": 467486,
+      "sha256": "abe0b26ecfb992a4c241af6eec3f989c62761cb3feb59a205bb7a3b5c9a5c80c"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/200/MITDB_200_BENEFIT_ap00516.png",
+      "bytes": 492333,
+      "sha256": "e0ccb530fe082d411ea1987e430b0d3d15f5714f2eb9cb1316a00ea9d5280945"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/200/MITDB_200_BENEFIT_ap00522.png",
+      "bytes": 473302,
+      "sha256": "58ec52719ca323612099a8b5429ac043f6f85c15c48bf54bef3bf0591846a41f"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/200/MITDB_200_BENEFIT_ap00712.png",
+      "bytes": 464021,
+      "sha256": "856323e45ca6569d3daed85fef067432b357904eef1ff447a2228b3e28e90be2"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/200/MITDB_200_BENEFIT_ap00715.png",
+      "bytes": 455653,
+      "sha256": "c174450986acf2d21e509692d2270b253d9db726ce0b6b6f0cc8c2a1f8b0a8eb"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/200/MITDB_200_BENEFIT_ap00896.png",
+      "bytes": 486735,
+      "sha256": "e362ad2c8e45c96146eb19e97679c37fb2177c048559018029ad7898984516a1"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/200/MITDB_200_BENEFIT_ap00930.png",
+      "bytes": 476520,
+      "sha256": "44bee5feb8dc4459d344b4dd6eaa56911458b44b70a2ed30bb48a913cbddf8f5"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/200/MITDB_200_BENEFIT_ap01336.png",
+      "bytes": 473952,
+      "sha256": "4b96ee6cb8ca2fde488f2dc8c1ce49ad3fdd2c7e6911e14e38ec3ba0f0981bef"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/200/MITDB_200_BENEFIT_ap01447.png",
+      "bytes": 468166,
+      "sha256": "4f4cde46ca1ba9e3f5b868f4b4122e7dd92286a7b9137d3cdbcae582ec67323c"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/200/MITDB_200_BENEFIT_ap01669.png",
+      "bytes": 468282,
+      "sha256": "e458cd1ba1ac5ccd5d6266ed258030632cd8d4e1356976897e40eb9f6f7b5f25"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/200/MITDB_200_BENEFIT_ap01831.png",
+      "bytes": 456499,
+      "sha256": "642f6e342227651a1614cb74e8c2b291b34b0269e47948c2f2b3169282317bbf"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/200/MITDB_200_BENEFIT_ap01853.png",
+      "bytes": 468134,
+      "sha256": "0b76ca9f7843bf07555c6c1a153eb88cbe4a9fcfa65fea2c85b6540eb29f7a05"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/200/MITDB_200_BENEFIT_ap02255.png",
+      "bytes": 428325,
+      "sha256": "d9fe7eb814cfa00fc59975f5fac9f2c59ca18378d3142b9f20aea2ae3d55272e"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/200/MITDB_200_BENEFIT_ap02420.png",
+      "bytes": 429383,
+      "sha256": "11547f618cd824b2ae70608d780f489d62101c865ee0142852d3376f2b324b3a"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/200/MITDB_200_BENEFIT_ap02447.png",
+      "bytes": 437127,
+      "sha256": "a5dc90c497c72bf0819b1e319acbebcf977516b192837824a22b959bc8d17954"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/200/MITDB_200_BENEFIT_ap02454.png",
+      "bytes": 428657,
+      "sha256": "ac25184db1d790c89a1dcdee8132700ff280e8c388fc4c82f91154e57f05d4d7"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/200/MITDB_200_BENEFIT_ap02597.png",
+      "bytes": 445185,
+      "sha256": "757c65d91a43f095897d2a734e6f2ef5e9b98c9f94943cffc47f1d09701ff837"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/200/MITDB_200_BENEFIT_ap02629.png",
+      "bytes": 437714,
+      "sha256": "f7efc98f81f9f564626c35f16f3af3df9d43ca2551f6843950a4c585fa97331c"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap00065.png",
+      "bytes": 493070,
+      "sha256": "e08160d524a8959ba0434853ae655cffbafd3bfcfc9cc360c8e85f9f46daf77e"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap00482.png",
+      "bytes": 466712,
+      "sha256": "1a6d684643d0908555b151c87400583835b15b39609384732726e43c39b6554a"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap00484.png",
+      "bytes": 470644,
+      "sha256": "0fa89e55c93672b34f0cfa337338e38dcd7babf5af968d94719a72ec41949b03"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap00486.png",
+      "bytes": 481641,
+      "sha256": "04b19897d0c41557196f13f51912a47c55df5c7639142296347b02fdbb29a37a"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap00489.png",
+      "bytes": 471688,
+      "sha256": "41d48cd2403e1f4e8dec82c8f4b775414aa00a34f283a3af48b0cdfc672f2520"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap00641.png",
+      "bytes": 468544,
+      "sha256": "a5631606fd0ce2cde1b8c735374ef49e17e50ef0dd3ed33692f12463cf5f4717"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap00644.png",
+      "bytes": 467723,
+      "sha256": "017d6130b8bc4c876e5e1a08321f4d577f93793bf32375c1612f0d848beb6665"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap00795.png",
+      "bytes": 470520,
+      "sha256": "60d44fc08ee56a643eac865fe29437747b3b9b4c05438f684da8ab7c6f1f7a1b"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap00811.png",
+      "bytes": 465644,
+      "sha256": "2b2df2bb571862c62cf00b55b71765df0afa3455b084773d2194d7c7fe515faa"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap00887.png",
+      "bytes": 506203,
+      "sha256": "1b96014518f4f3b09c9702879873b0aa1826e133637710b69041d62d3e19feee"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap00888.png",
+      "bytes": 511816,
+      "sha256": "84b060388ee45cde2c14d88817cbba6db4b5c1a952b0c1b9216fa55316fb9ab2"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap00889.png",
+      "bytes": 516040,
+      "sha256": "b6daeb07209999cdb85e5fef3b427b8623176ae9a6ec5635fd98b108ee9ef997"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap00891.png",
+      "bytes": 524780,
+      "sha256": "3f923509f49940144411aacba19b154bf4f8a50a5c6eff0a1e990aef55e11cf3"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap00892.png",
+      "bytes": 518214,
+      "sha256": "dd98116047f167ace696376213a391f7907d61d86a7c99714484dba9f2f92288"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap00895.png",
+      "bytes": 514506,
+      "sha256": "d305d1d05cb2adec59d61862a3eab365d32836b1bd2f369ab8b270e03fa635be"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap01031.png",
+      "bytes": 470784,
+      "sha256": "d3267914394ae0640f3fcb0c77d8629e20382409bf6e190de193ad764cb3718c"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap01042.png",
+      "bytes": 499331,
+      "sha256": "4e434c205113e4a36cbc98634e56d5202fd3dcf22ac9ddba0a1f326c00c611ed"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap01134.png",
+      "bytes": 453898,
+      "sha256": "705fa1868d279fde93bce6a93cf72aed4798329d2001c174879c27218acd8660"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap01240.png",
+      "bytes": 488106,
+      "sha256": "76564ae40cdf7b0c8ecedcc6e9e90369a3be37c36a485ecf9f53cf4c6534e281"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap01296.png",
+      "bytes": 503962,
+      "sha256": "c961efd311638eb6909e34fcfcd50e5332a869072eeea31cf3ffd7df00555faf"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap01305.png",
+      "bytes": 495389,
+      "sha256": "66987f3159f663119e52af965ecdbee0cb226dedbd983d88cb1dae9b250be50a"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap01326.png",
+      "bytes": 492346,
+      "sha256": "afe8b041babadc144667230f1feb75deda3f60dbc9ec779761c9500076796f3d"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap01450.png",
+      "bytes": 518142,
+      "sha256": "f66fc4d78f473232c75a3dd25aabd9e0696b78443b29368dfb60aae0e7b34aa4"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap01477.png",
+      "bytes": 466256,
+      "sha256": "af00d5c46bc873b85cd168e4946b13df138b4ac87db0bd7b0efef327698eba18"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap01534.png",
+      "bytes": 476776,
+      "sha256": "09b2b4fc44f85087da40d884fce8d779f3f0ea1e71ad0ddfab19eeeebddfeb0e"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap01576.png",
+      "bytes": 450453,
+      "sha256": "0c69407fef620c181bf43bc994f40b5805228a2f6e5202edcdda9b1efcb4a19c"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap01789.png",
+      "bytes": 457511,
+      "sha256": "25d36fd88895f9356a77d9820a7a034ee3b5ee22be75ec3a0c13427e1522ddb6"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap01797.png",
+      "bytes": 473681,
+      "sha256": "f40d34487017d6077a9a28d3cc24e19748953e6b5e504c3929aea0564621826d"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap01798.png",
+      "bytes": 491767,
+      "sha256": "399c08d5349c331c6a85e103935431bb1e00bfe3576d6eb797c5810e63ad9326"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap01804.png",
+      "bytes": 470228,
+      "sha256": "6eebe3e021d2669035f15774bce340dd0b06006e86731b33299258aab9524545"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap01807.png",
+      "bytes": 466251,
+      "sha256": "399511940b92e4c578d8ec4f52429656d3ba6fd03d35cc9c9ea72ca9de3fee4d"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap01943.png",
+      "bytes": 447854,
+      "sha256": "abbb3303a58b030bd36867eded60bccb952587c545abb3d96a7f6fb742e4e01c"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap01949.png",
+      "bytes": 482883,
+      "sha256": "756b50b83833fb8eae76505313bd7b78151f1e109690838b090af32fbbaffee9"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap01952.png",
+      "bytes": 488790,
+      "sha256": "04c5a3dbae79c21b438fb47a01dce3ca641712cd6fdc5ba8873402fb5e9ba1bf"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap01954.png",
+      "bytes": 495705,
+      "sha256": "f1268d002e6a20f795fc42c9642e58cb0aa522e9df3a1c3642504bb95184809c"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap01955.png",
+      "bytes": 498313,
+      "sha256": "4ee4951372146f9bc3e769ca446568477c3e6b67fd46ea4c17d04daee806c2d6"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap01957.png",
+      "bytes": 492864,
+      "sha256": "b2d46b563700e9d1a81fc2e16767355dc79f2095f52b7e8f022f2f553a526cdd"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap02008.png",
+      "bytes": 478379,
+      "sha256": "b7aa9cd96edfe159c9ba6f0dbb0d49e60362743fc9d1163a39058273bffbdf16"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap02012.png",
+      "bytes": 510515,
+      "sha256": "90080c4928aca7361e160e31ef250614510104a5fd8a4e3d7393acf80810d6c2"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap02014.png",
+      "bytes": 517199,
+      "sha256": "85ce9d4c005606f6227077fad345699c31152d7ce6304f9ec651e1fc309474ba"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap02016.png",
+      "bytes": 528140,
+      "sha256": "67cf5e4177f88c6890b798ba0189cfc86a795e5669e3288ed7ff052b64481461"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap02020.png",
+      "bytes": 510651,
+      "sha256": "0d4c30f6d14ba417e22f2a0dd40780fb7b029239a214056b199be73ec07fa5c5"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap02094.png",
+      "bytes": 476850,
+      "sha256": "d76aef45d16a7b46517dc5d09d1eb46aa1eb3ec9a56d8ff86079afbf88b46ad9"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap02187.png",
+      "bytes": 477998,
+      "sha256": "751d54d409b31e0af120fec9f918f1a176e5cc78649e64ed526ab367f67457e7"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap02207.png",
+      "bytes": 502216,
+      "sha256": "68ff70dcc01857e8be1ecbf13ac95e3623a20a3b8fc4e06fc5a3b263c3822ce4"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap02221.png",
+      "bytes": 482557,
+      "sha256": "a459bfe6ff51bcea2ed0bac0f6e81a4a50e1b4a4110b1845be6b8c32c1d078f5"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap02232.png",
+      "bytes": 473186,
+      "sha256": "c8a3112ac758aa978b5357fecfaa38e6978b841fb2db596456c8dbb2fa6377f2"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap02235.png",
+      "bytes": 486292,
+      "sha256": "06071fb50186e58bb8e8e45cf5d0a0c616892891cf661815846bd8abb30a0cfc"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap02376.png",
+      "bytes": 456657,
+      "sha256": "78fb7e77ba7baa7e7ffd2431b5a7cf2215fd25a0cb5d1165d47b881e7c396080"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap02404.png",
+      "bytes": 497187,
+      "sha256": "5c816015183330c1b12a0cfa1240950ed541640b5410982be5f19fcafb64fb7d"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap02415.png",
+      "bytes": 511108,
+      "sha256": "f824506f47015034df40d2bec01842a348c37a0c21233297998a00211f16cc57"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap02446.png",
+      "bytes": 481961,
+      "sha256": "f81a6668a157c46f8753f747c55d6a6edd11433177098ad1e9cbaf2a28b3fe63"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap02453.png",
+      "bytes": 461463,
+      "sha256": "fd8901e72de1ae3a5a36b240179bef5e210cf01a0b3a57e009c1749c01bb5943"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/203/MITDB_203_BENEFIT_ap02474.png",
+      "bytes": 470649,
+      "sha256": "ae93767358028ab2d6fc0b0f086bf3c8a5ed2b42d420b3b3cc15045e1482ec2b"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/214/MITDB_214_BENEFIT_ap00094.png",
+      "bytes": 497411,
+      "sha256": "2cb8d9f63eaf2c210c44ce3d9e3b002e6866d2dbedc722292af4c15508e81b04"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/222/MITDB_222_BENEFIT_ap01658.png",
+      "bytes": 442774,
+      "sha256": "ab5e6a922bf938a370b85d727ca1dcf6b8f6cba4bcbb62db0a9bffb10d7b368a"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/222/MITDB_222_BENEFIT_ap01967.png",
+      "bytes": 451896,
+      "sha256": "52f41232ceb23d799281361d4f415a349e58088c1fd74d3e88295802184fa743"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/222/MITDB_222_BENEFIT_ap01969.png",
+      "bytes": 461377,
+      "sha256": "ce475c8c24e3dbc46fd03e8d16d2b35cc12d529d213618871d488f798ec5f4ea"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/222/MITDB_222_BENEFIT_ap01974.png",
+      "bytes": 500603,
+      "sha256": "0d04c295c218bbcae6af95b767881551382ee358d6976da34c7bf0e0cc9ffad7"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00049.png",
+      "bytes": 454515,
+      "sha256": "82b954ca4349fe7c3f4c4dc2e68c48d6bf1fe8f218d1be7af27a9353a29e5da1"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00067.png",
+      "bytes": 428368,
+      "sha256": "b1d7368ec2c356af16f172301159028489cfb3b38fb10da06b7db8cba7c10eed"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00069.png",
+      "bytes": 445481,
+      "sha256": "235ad5d4d2e8acd107251ce2c24666948a5bd8845f5f62807fc7440fb5da5c7d"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00071.png",
+      "bytes": 447130,
+      "sha256": "3f034121a92fa9488222b57ca5d5d65b8b10cce25dbd8f3f9c85fd36268f2e55"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00078.png",
+      "bytes": 432208,
+      "sha256": "c0e913333d62ee1c36b9e11375f0da92f6768eed03b4925b43942031af5b435a"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00105.png",
+      "bytes": 398123,
+      "sha256": "e5a74535d478a1b5d4fed1316d41768f281c0e53537cfcd121363a00e6ce81d8"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00111.png",
+      "bytes": 417358,
+      "sha256": "ba7da944ca4e501da452534eec398207a89d615fdd32b55993d171bcb59a7a5a"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00114.png",
+      "bytes": 416778,
+      "sha256": "7cb6b038db465e1f29c7ea78122591bd7bd33c2a50281b558d3ebfca39ada570"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00159.png",
+      "bytes": 418831,
+      "sha256": "69c3c2bfec6e20e34074b5d94201362385c19db428c035a6eeaaa46d76b38f7a"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00212.png",
+      "bytes": 423581,
+      "sha256": "9c26fcb4451bd41931b8461b7e4097b9e702e57cdedbc95bc163e5a0d90e7fb2"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00279.png",
+      "bytes": 443292,
+      "sha256": "3dbb787d8733feeb8aa8bf9d2de7fb34aba1e98d5d013b762e168787b9f18cb3"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00281.png",
+      "bytes": 459699,
+      "sha256": "e3a238dd5ef602c7a98ce868fd7300bffad8efa4668303e955ab88c66ae0a3ff"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00325.png",
+      "bytes": 482664,
+      "sha256": "5f6e7516b1f859e9c30616a7e168ded78d120db50d1189e4e9eab8ec389eac92"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00327.png",
+      "bytes": 487526,
+      "sha256": "ab52103f7e03aaab301f4114874e62a858be3169bea642b90156fa1038456baf"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00330.png",
+      "bytes": 471007,
+      "sha256": "8cb167fe593975ec4b8701d70c734c6a210c56221f5e4288c4a9f8413dde2bfd"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00331.png",
+      "bytes": 491321,
+      "sha256": "259fd56b75ce38b69ac9bfbf7f8b267d0f16d66e504e68ec75a383fbff66279f"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00333.png",
+      "bytes": 486038,
+      "sha256": "ebbbf7ea5ec635395f978066184b1a647e84bb06a791eb62cb70b9420b051913"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00335.png",
+      "bytes": 508559,
+      "sha256": "1c5813a4bcd92dad8e906e5a94a0cec3b07b6e1e329eea058fb3b97725a91f18"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00337.png",
+      "bytes": 527650,
+      "sha256": "bdafe45a9ccb8bb9795ff2059cd3ed74e4c20b18a429804c7809a4804f3698a2"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00349.png",
+      "bytes": 459395,
+      "sha256": "c8a099335cf91fdc61a67853d0f2597eb802583dca95eb2ac6f8a8a3c4a4dece"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00372.png",
+      "bytes": 442877,
+      "sha256": "9a4108c5f585d94b9c697a32fc036ee484c8315705420300e7943ad955900d08"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00388.png",
+      "bytes": 468575,
+      "sha256": "ffbe3f81b577cc128b13a4507477ffbc0b59609f73e3c129723e1eb9234d7270"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00414.png",
+      "bytes": 460621,
+      "sha256": "e9e8eca494ec9255af50f68a651798dce2376a6a181adeefb019b3d17329f112"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00415.png",
+      "bytes": 453147,
+      "sha256": "6ea82b0780857d505c9238755c8664236ea6eb9e0a2700de136ca123b8a9a969"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00417.png",
+      "bytes": 443235,
+      "sha256": "31b1f61e83a65a134091a7279618de26332ae1d38c2b165bacedb713d65fdfeb"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00418.png",
+      "bytes": 448831,
+      "sha256": "58fa9e46fdcfda47cbdb32ab673dceacb6f81537c8fc1adb19785261668e8cc8"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00420.png",
+      "bytes": 447973,
+      "sha256": "fce0c4d7cfdebeaed6f8973b30903e8b37654f65e64e773eda3bfcac3d276463"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00426.png",
+      "bytes": 444156,
+      "sha256": "c67160b524813b1b5b66b98f8ce56fb838887a0dfb3e871e663320fbf376c168"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00429.png",
+      "bytes": 446658,
+      "sha256": "68ad5db28aab8fc7b63cdeddd4aa431f51c3943eca0a13be62381b0b94cf5edb"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00433.png",
+      "bytes": 443945,
+      "sha256": "47a69edef0fa5974004c893764d06be877281a8d5e444d16bd603c1a58af23c2"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00435.png",
+      "bytes": 442629,
+      "sha256": "3ec50ae258cca6acc887f25ce59f710f5ef5b57f43b442410f92fb6994c406a3"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00437.png",
+      "bytes": 438301,
+      "sha256": "86b9ef64d1397d23d8705c04949b04102ed4af3cc7d892c45f617af6ed32c215"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00440.png",
+      "bytes": 444760,
+      "sha256": "36bbd8205bbbbcc27fc8e01cede4ccf4428224ab392e26d623de0533d4a19656"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00448.png",
+      "bytes": 449222,
+      "sha256": "585491bb764c630681e7301efc256f7c0a9838b51d20bbf550fb68bd26cc348f"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00450.png",
+      "bytes": 467405,
+      "sha256": "02ca525c295495de9ed7ad9e75f5ed7886f498c9120034eb5298dd95307eaa1b"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00455.png",
+      "bytes": 450906,
+      "sha256": "ca06dfda938d3ff4911dfab56a140577c1767264242f714c2eab0557cf25ac69"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00456.png",
+      "bytes": 449932,
+      "sha256": "9f0f3af9ec3c102ced4a22533e14c0d71fc13f57c98a0280ab30b23191cd0bc6"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00458.png",
+      "bytes": 503808,
+      "sha256": "b34fdcd4741ffc271bb5dcc737df544236877d849fb29b847cbe160f4a8f2aeb"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00461.png",
+      "bytes": 448267,
+      "sha256": "9fba3bfecc5e27947db5c923de1e043ab39f99f29154bd97d65046fb9870491f"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00463.png",
+      "bytes": 460535,
+      "sha256": "d0657dfacdf53657401755cbe4ed856c75b180c2613347691b5d668d17cf845d"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00466.png",
+      "bytes": 466440,
+      "sha256": "fb895607b09216130c58d3dcaf85c65800e609468bda1dd529297757a4997a14"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00469.png",
+      "bytes": 483326,
+      "sha256": "88f86fe7614106b14d60616f8accf98f5fbd05531bcbaae0829581d5dc6d8dfd"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00533.png",
+      "bytes": 434126,
+      "sha256": "d58b186fe5f716263e5c1409f8fc7f00c6848c6bf1b3eeb4c4ee7ee4b022c97d"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00547.png",
+      "bytes": 419237,
+      "sha256": "cd1d8178fbb069c0a834e09e23ca50ae55c1613107c3ff9d65af538aedd8caa0"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00659.png",
+      "bytes": 422630,
+      "sha256": "010760f2de1ce8f431ec16373976ebb44cb5b6c525c69b98b8c4648f90a60a4a"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap00756.png",
+      "bytes": 456020,
+      "sha256": "343522dcc78ba4e34fb374a4231bf7b542384d0fa709a0ca3bd554a7ba5356a8"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01258.png",
+      "bytes": 439652,
+      "sha256": "46559a5cba05464b33de3c63801165aac250e67fb724dda1fcdb90ed905321b2"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01446.png",
+      "bytes": 467192,
+      "sha256": "540652344e74ee68c481015f1bd53e4783af2c9c3c975465081027d04d55ad25"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01448.png",
+      "bytes": 454504,
+      "sha256": "a2f225b813186d841a3ecb081c5b4cab68ac72b487eac93f1b58446eb5d22496"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01467.png",
+      "bytes": 427418,
+      "sha256": "f35d7d767c1fa738f546622540c477b4f43ad550a91dd7267fc51c210fb97d67"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01527.png",
+      "bytes": 430727,
+      "sha256": "82867340539f9cd4e25132bdc301fca06e048b700c42896ec43ad5f64240f5de"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01534.png",
+      "bytes": 422091,
+      "sha256": "48e1db7209e19f2128bce12fc79ebc0f9c6644f300a009db1dba35cd642d12c5"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01545.png",
+      "bytes": 420014,
+      "sha256": "bbbd4413edb1c3900e3a71c65a74fb6dca5814e9618fb2439715f5e9cae23cdc"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01571.png",
+      "bytes": 484207,
+      "sha256": "3b030fca7ded5858b0a0c4632f3efa1120161e72046ce8906b2df3e9face6145"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01578.png",
+      "bytes": 477938,
+      "sha256": "113c91b72c0c985c2da0fc4fc9e62b704f66ffb1d7633524df06d0f01a68500d"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01579.png",
+      "bytes": 468523,
+      "sha256": "7f6f9a479e2963f7e3115311219d266ff8363c4f991daeb9285a0ebb09865af5"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01580.png",
+      "bytes": 490758,
+      "sha256": "cc4941794281aa922241fa917c3e4a459bcbf33cc959c338ae519cac2d8394e4"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01581.png",
+      "bytes": 509578,
+      "sha256": "e87de78c06ab5da8a4741ca4b259267f26585fac3a59e6d3e9249d287ae7a7fb"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01582.png",
+      "bytes": 502760,
+      "sha256": "3c2796bf1d6214f1913661ae52675f627427f19b5d0be71e13c67be7e9fbb468"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01586.png",
+      "bytes": 443570,
+      "sha256": "0e89dcee3ed56d0095e79a68af1da6107b8043af4fda7ef0cac55580f17fb997"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01589.png",
+      "bytes": 462690,
+      "sha256": "f12d68314203186e246ab13fa137db019873a0290dfabbb1bc31232dd010cf69"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01590.png",
+      "bytes": 489281,
+      "sha256": "6d5e5518b626f360d7a7dd77cffb74eb275f01d864999d8ed408cf2d2b40d411"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01592.png",
+      "bytes": 479908,
+      "sha256": "a881ddbf2ed3d5be00417a4dc6116d093ea63379cc822f7c53e1e899c0bd49ae"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01594.png",
+      "bytes": 468638,
+      "sha256": "dd9a038a55d0e2fd93d5a9527acc9266c19f9c822d4c958d34d384f464a03c42"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01596.png",
+      "bytes": 470916,
+      "sha256": "14c16c615a2f9ce895131d64f2bfae842654920e365e7190051fbb95fa9d6c49"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01653.png",
+      "bytes": 446939,
+      "sha256": "a79bf5cc6153b4b5da590a254974a9cb3fcc8f4210a87ca11378b092100e87a2"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01656.png",
+      "bytes": 448465,
+      "sha256": "535d866e16e93bab1ce360ad4b23817571fa509e5ce98b8e70fddad03963f8fb"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01660.png",
+      "bytes": 442739,
+      "sha256": "130ad879add3849ed63503c5866257555f349d6fef2664a7383c7c8c4932536c"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01661.png",
+      "bytes": 470301,
+      "sha256": "6c414d612082b7cf13aeeb7fb3845ea38a86fe4080a53383308c1a9ab136972f"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01667.png",
+      "bytes": 448547,
+      "sha256": "1d79a3ca2862e7116fb11e26e8f8a0c3307f455dda4faa5f877ceeb9e5bb194e"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01688.png",
+      "bytes": 446498,
+      "sha256": "202561979a1811a28432e6c2ceaadabb201007834d13dcddb91336b662282b57"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01691.png",
+      "bytes": 455560,
+      "sha256": "82e75e6e8f260ddac5a978646ce9a3b32ce8a396a88dec0809ef282a4b33830f"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01693.png",
+      "bytes": 453927,
+      "sha256": "a515bdefd586541aea320a9038039326e925f1d364673ad832c20a67fa6bcb41"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01695.png",
+      "bytes": 451578,
+      "sha256": "9fd212de5dc30fa8af92af5b54ea5a1c93c4cc7a2263b692e00f54dfe5a612b8"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01699.png",
+      "bytes": 449632,
+      "sha256": "34fb6f1ffdca7e5a0718420a28e3ea6862d7c3d6230b7c5b94b9b398d85dfa4b"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01702.png",
+      "bytes": 468476,
+      "sha256": "71d6606397c2c102eefb5add8401c278a6680287245416095b874714363ecd34"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01711.png",
+      "bytes": 422295,
+      "sha256": "b01eabe01ac04b0f9c82fda5bebcd7d43772ec1fae6e2f5b1548076780ceed87"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01712.png",
+      "bytes": 447603,
+      "sha256": "b59d51d3944d92fc942ef2a1513075bbd3b0847d05a61317ba7b50a2532e2de5"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01717.png",
+      "bytes": 462841,
+      "sha256": "bb2c4ec534685c22d7f705dab0cfebd68597fa322225eccdb75d91b77814c12b"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01719.png",
+      "bytes": 505098,
+      "sha256": "64280820e5f5b616838f0d1a33c0d35694e455246a02bf1ba08f75012c188a80"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01721.png",
+      "bytes": 494243,
+      "sha256": "5196ac4345bb745827c5a7bc6622fd9c6ffe63ea41fcf0f122b8dcf305e4ed8b"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01723.png",
+      "bytes": 502899,
+      "sha256": "a45309a108968691145b0d84f86a36b0c34e68fb4a69f4d306de3a396f93a09a"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01725.png",
+      "bytes": 513397,
+      "sha256": "6df478d30a6812c4bea0440badde0986cd4c15ce3a312f8ecd1ddc8072abec5f"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01726.png",
+      "bytes": 516968,
+      "sha256": "8aaa17e27c2d1df08ef546ba255e053bb8c9869d89a9c0ada7b51b9424fdefee"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01728.png",
+      "bytes": 482914,
+      "sha256": "f4e2b2b67a940f1f3b2283645afee966b583edc404100a59d5b578e7b3a37e71"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01730.png",
+      "bytes": 507535,
+      "sha256": "01475c3f78dbb1895a5b70d1999d96f013346145ac09f40def771641539d4c48"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01731.png",
+      "bytes": 497052,
+      "sha256": "2ff9e604ee966ce5fb8910f6cd38d05a313534d45de3e9e47f2b2282f80396c2"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01733.png",
+      "bytes": 476300,
+      "sha256": "17d1e5621edd96fc6159d6dc23adfdf4a08f15ca41e0720869069d5d8d16af9e"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01756.png",
+      "bytes": 459307,
+      "sha256": "fe6fd340d6986ee8c42c6ab52bf560baa2c5298261a1ca11e850cc1311429371"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01758.png",
+      "bytes": 451680,
+      "sha256": "28ccd8333d5b8b7fdaeb8308381af8944eede11457649d7cf87d75db2ff26cf9"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01760.png",
+      "bytes": 468904,
+      "sha256": "34228139fe96206f4786afed189388413809373e8a6daf1f3d1b33cef71818ef"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01762.png",
+      "bytes": 471302,
+      "sha256": "6190af78b0e36463f7c266691e3deddb92db3bc3bde0ff195bd68ae482e51db4"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01765.png",
+      "bytes": 468476,
+      "sha256": "802d164d80097486c16721f4b9ee7b76c2f91b4a5b6985bc50d5d81df26e672d"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01768.png",
+      "bytes": 461611,
+      "sha256": "7d6341e1bea8c5551b95a81994de0c61e0b63c4c79853152f3742e7a1356a567"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01769.png",
+      "bytes": 474833,
+      "sha256": "68e49c6a14bded29059ab0a9ea6206ab9ed71aa024d25a83e3d500c1f2e316b0"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01785.png",
+      "bytes": 466494,
+      "sha256": "b4dbbfa729f36301596a9033ac8cf0a34b9294c3ef22c9a921b5ffe030ebffeb"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01789.png",
+      "bytes": 473429,
+      "sha256": "5228d53168669555cd2276ef1cc5b66707660effc34e141dee026a019a3d065c"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01791.png",
+      "bytes": 501105,
+      "sha256": "3770e31c311f49d5fbc939fba7a29e4aa7a84f9bc79a1233e3279db859d6d165"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01794.png",
+      "bytes": 471209,
+      "sha256": "bdbbc34e9e5fe3684c1cb703a4dff69a8d7edba238e6775bfa9bb4c3e1734fe7"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01915.png",
+      "bytes": 472710,
+      "sha256": "aab0d3ef2f8ab4b51bed88419dde5f0b49c63bca9e5079aceb0e96061c382674"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01918.png",
+      "bytes": 451851,
+      "sha256": "bc9ac2bed84057d348eb4fca5da50db6a672f0b6fe4aba876b94d9277d76ddd8"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01925.png",
+      "bytes": 457327,
+      "sha256": "16bc9c1cee36cba8b53c1b482f4b2536342910b4b86d6f436e1c4cc2e095fcdf"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01929.png",
+      "bytes": 468395,
+      "sha256": "a1523d0741d22dd8f90745df40a69396b3fe35be05d05d4a0e1092c048c9f500"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01939.png",
+      "bytes": 453273,
+      "sha256": "4c2aef9ac9bc63e83b3e26806236a7ca955c6b676085a233950326366f6fd951"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01940.png",
+      "bytes": 463020,
+      "sha256": "b3c1fa5d25c16907d62f3e630e4312078c54fe33bcea9e9b18ac9dc3a3986941"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01942.png",
+      "bytes": 483907,
+      "sha256": "1812276488403c6c8719be23140d16019ca2adf634a788aba633c7f8942a2286"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01944.png",
+      "bytes": 487261,
+      "sha256": "32d207b87792423d58fbfd13b25d2bca3b797f3bbc4620590ca9c9a9aba200eb"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap01946.png",
+      "bytes": 478259,
+      "sha256": "449b7fba369ce7154cb367076a8df793b6011aa1f8bafbd5db68bdacf426d184"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/228/MITDB_228_BENEFIT_ap02020.png",
+      "bytes": 445365,
+      "sha256": "8d376e8e7e5870ff34216fdabd2b81677f9bd852857b59289209ffe41cb26506"
+    },
+    {
+      "path": "images/MODEL_FP_REMOVED/233/MITDB_233_BENEFIT_ap01224.png",
+      "bytes": 459178,
+      "sha256": "a7e500fd52f946f10fd958a0455e570c8061501fa68d013a89c14046d849d682"
+    },
+    {
+      "path": "images/RR_FP_REMOVED/105/MITDB_105_BENEFIT_ap00873.png",
+      "bytes": 466374,
+      "sha256": "03a2f78e2d8e2e9083d3b4c1a72a036af786c7eb686ed4929372ccd9d1a35026"
+    },
+    {
+      "path": "images/RR_FP_REMOVED/105/MITDB_105_BENEFIT_ap01205.png",
+      "bytes": 471421,
+      "sha256": "4eca80b5571ccd83fdeeb5f9d2de941ea0fd0398449b306b5795ea9c15457fbc"
+    },
+    {
+      "path": "images/RR_FP_REMOVED/105/MITDB_105_BENEFIT_ap01664.png",
+      "bytes": 483113,
+      "sha256": "6149ddac865952bbbbd59483594706e5c2f6d450ca998e0721bc64e46ec3530a"
+    },
+    {
+      "path": "images/RR_FP_REMOVED/105/MITDB_105_BENEFIT_ap01666.png",
+      "bytes": 476563,
+      "sha256": "c0169201ba377823756e992e311a8a8ff7ec311caa44a32c2d3d7f15944ecf26"
+    },
+    {
+      "path": "images/RR_FP_REMOVED/105/MITDB_105_BENEFIT_ap01670.png",
+      "bytes": 487872,
+      "sha256": "d9e4b938bf7a35bcf2d70ea66dd1ecb6627752eeea12b5eff327b0339832fe57"
+    },
+    {
+      "path": "images/RR_FP_REMOVED/105/MITDB_105_BENEFIT_ap01724.png",
+      "bytes": 473825,
+      "sha256": "c25cab010170007627357305fa4f265a7a651e70bc0bf71aa3292fc6c0a08d20"
+    },
+    {
+      "path": "images/RR_FP_REMOVED/105/MITDB_105_BENEFIT_ap01737.png",
+      "bytes": 482727,
+      "sha256": "83e0e530bc72d84bfd67cba6504036e101c5213c31884baa171ea2a09232c142"
+    },
+    {
+      "path": "images/RR_FP_REMOVED/105/MITDB_105_BENEFIT_ap01758.png",
+      "bytes": 452764,
+      "sha256": "9a4787d42b77ab951f5c548bc8271d770f4a599e617576456a3eb68efe998dcf"
+    },
+    {
+      "path": "images/RR_FP_REMOVED/105/MITDB_105_BENEFIT_ap01824.png",
+      "bytes": 461377,
+      "sha256": "961a91b4182a06220911a743f79bbb6f6aadbf29ba6cfd9617f47cca55a48fd7"
+    },
+    {
+      "path": "images/RR_FP_REMOVED/105/MITDB_105_BENEFIT_ap01867.png",
+      "bytes": 497161,
+      "sha256": "920fc9dc342d654052ccae8d4559bfef96ee40c1d6f40ce675c8d3574646722f"
+    },
+    {
+      "path": "images/RR_FP_REMOVED/105/MITDB_105_BENEFIT_ap01873.png",
+      "bytes": 509772,
+      "sha256": "4a10a9bddb4e1faf241d4c8b6aa8fed0f63be245b5e1bda58a38e9fe5a912cc2"
+    },
+    {
+      "path": "images/RR_FP_REMOVED/105/MITDB_105_BENEFIT_ap02391.png",
+      "bytes": 476583,
+      "sha256": "9088aadac9509e5aab420e00ab045cf33cfbfa15734b8172a90bc9cc7f252b3c"
+    },
+    {
+      "path": "images/RR_FP_REMOVED/105/MITDB_105_BENEFIT_ap02461.png",
+      "bytes": 486600,
+      "sha256": "3daf59fa16900327275ba1408b5facd8301cff4c825656136d12c61d1cb4b2db"
+    },
+    {
+      "path": "images/RR_FP_REMOVED/111/MITDB_111_BENEFIT_ap01608.png",
+      "bytes": 484359,
+      "sha256": "518dfdbe361bb645267bc0dc1f7e0d5fb0cdb23e7bd3ac4f07c4312f0e29594e"
+    },
+    {
+      "path": "images/RR_FP_REMOVED/200/MITDB_200_BENEFIT_ap00388.png",
+      "bytes": 479764,
+      "sha256": "cd43b737fb5d775c9535b15ae729b6683033a6ff3cc824a92ed8f6b9bb50d705"
+    },
+    {
+      "path": "images/RR_FP_REMOVED/200/MITDB_200_BENEFIT_ap00455.png",
+      "bytes": 474511,
+      "sha256": "caf23916ab937a1c6ab42efea55b3914f4a913ea1127f47d31c2a812fc7f0b97"
+    },
+    {
+      "path": "images/RR_FP_REMOVED/200/MITDB_200_BENEFIT_ap00465.png",
+      "bytes": 502695,
+      "sha256": "b98aa712701e324ec7798c03be4e4a0982d0684037622fe1b127ac549738be4d"
+    },
+    {
+      "path": "images/RR_FP_REMOVED/200/MITDB_200_BENEFIT_ap00884.png",
+      "bytes": 478109,
+      "sha256": "ded64e7f0edcd73feba689eafbc55c6fb09ad9a0b40feab5daa387fbabea0910"
+    },
+    {
+      "path": "images/RR_FP_REMOVED/200/MITDB_200_BENEFIT_ap00913.png",
+      "bytes": 478780,
+      "sha256": "dde4e11770f327bffebd5bd16f5016eb054526afb2aa1ee85eb1fa3ef6d2c25f"
+    },
+    {
+      "path": "images/RR_FP_REMOVED/200/MITDB_200_BENEFIT_ap02427.png",
+      "bytes": 431919,
+      "sha256": "78904097aa2a8ff848ff1c24a4d6b7a46a1ad90fa93ece048eecf0a4a3dbec71"
+    },
+    {
+      "path": "images/RR_FP_REMOVED/203/MITDB_203_BENEFIT_ap00885.png",
+      "bytes": 493097,
+      "sha256": "bb3a838385f8e2a4eb0e376ada3c75c1aafa031af2ccda6f8ec8f01831e69c36"
+    },
+    {
+      "path": "images/RR_FP_REMOVED/203/MITDB_203_BENEFIT_ap01041.png",
+      "bytes": 498737,
+      "sha256": "f394672e1995f841dcf8cd9386d457103b87c5c3e78baf02485e1e94923c6167"
+    },
+    {
+      "path": "images/RR_FP_REMOVED/203/MITDB_203_BENEFIT_ap01045.png",
+      "bytes": 488250,
+      "sha256": "43c8a90c2e0f5482eb59afd99a687299c875a09dc2ff049e0c9414748a936a8f"
+    },
+    {
+      "path": "index.html",
+      "bytes": 163976,
+      "sha256": "8b227a33230874c5c780bd46ea9a908e0b72201b426bfecc1d87b49c898671e9"
+    },
+    {
+      "path": "package_benefit_gallery.py",
+      "bytes": 5518,
+      "sha256": "227d5522272e901c8b427257c6690c0e911647110470bc0cba24034cbedbbe85"
+    },
+    {
+      "path": "paired_FN_context/MITDB_105_FN_event01870_ap01905.png",
+      "bytes": 491367,
+      "sha256": "49a4120a19592f5f711ea255b08157751a277e53c4d0b1e147aa2ade2669f963"
+    },
+    {
+      "path": "paired_FN_context/MITDB_203_FN_event00887_ap00890.png",
+      "bytes": 507316,
+      "sha256": "7c4026fadae1b06dd7a6dbfb9e3565073ab5e5fedd10d412e456034e8d0ac1b8"
+    },
+    {
+      "path": "paired_FP_reduction_FN.csv",
+      "bytes": 266,
+      "sha256": "bcd3e202344e8be892567e6cfff90346b2895dc989e46d01d6a2f8d0f9c9f257"
+    },
+    {
+      "path": "plot_benefit_cases.py",
+      "bytes": 32044,
+      "sha256": "0d5fdc48746e139c4b888adccda6ebba266a5c88c0f927c297edbd5122a5e3bb"
+    },
+    {
+      "path": "plot_error_cases.py",
+      "bytes": 16953,
+      "sha256": "a489a084d69f17a98a31edf2825786c82d0e3a6e05125dd092cd3f0e60815f1f"
+    },
+    {
+      "path": "quality_checks.json",
+      "bytes": 858,
+      "sha256": "77721f91a1aafd1f24ceaec93037c99a0d9a83c9c9cacc12fbb7fed9160b7feb"
+    },
+    {
+      "path": "report_captions.md",
+      "bytes": 2858,
+      "sha256": "514871c5c75d129baf72cd8a2e7520924f57a2b91a6f91b3308b4e28f1080dd9"
+    },
+    {
+      "path": "report_examples/01_model_extra_candidate.png",
+      "bytes": 463827,
+      "sha256": "b81643739ab4323bd17e55cada5314392eda26e2c4bc0dae895232a12981bfb9"
+    },
+    {
+      "path": "report_examples/01_model_extra_candidate.svg",
+      "bytes": 303897,
+      "sha256": "fc90025d9c8b69ac80ae552cb2ff0f46c28b6b22d3931d4b9caa84d7a3f993f7"
+    },
+    {
+      "path": "report_examples/02_RR_rule1.png",
+      "bytes": 466374,
+      "sha256": "03a2f78e2d8e2e9083d3b4c1a72a036af786c7eb686ed4929372ccd9d1a35026"
+    },
+    {
+      "path": "report_examples/02_RR_rule1.svg",
+      "bytes": 291345,
+      "sha256": "736338d9af78a2ebe8ab7e2319ad98516213cd73533e7a756c9e9b2646d7e800"
+    },
+    {
+      "path": "report_examples/03_matching_reassignment.png",
+      "bytes": 494092,
+      "sha256": "63183a84901bba243ef7bb3bc35afcc6b2efbbde75b3d08f6bc65616a471fe6e"
+    },
+    {
+      "path": "report_examples/03_matching_reassignment.svg",
+      "bytes": 317726,
+      "sha256": "d556bb70e85a06a95dea7ff0731a32d8eccac0209e0b4cfeff9e1a2c4038938f"
+    },
+    {
+      "path": "report_examples/04_RR_rule2_duplicate.png",
+      "bytes": 488250,
+      "sha256": "43c8a90c2e0f5482eb59afd99a687299c875a09dc2ff049e0c9414748a936a8f"
+    },
+    {
+      "path": "report_examples/04_RR_rule2_duplicate.svg",
+      "bytes": 328724,
+      "sha256": "0874d27846b894ba28adba992fad18967bfb59e019bee1c890cbb158db23ab9b"
+    },
+    {
+      "path": "report_examples/05_FP_reduction_and_FN.png",
+      "bytes": 506972,
+      "sha256": "b551b0ca0c92a92a7f86607b1685d6fd8bbe59b21dcb84c2d1c92d7407a09792"
+    },
+    {
+      "path": "report_examples/05_FP_reduction_and_FN.svg",
+      "bytes": 326202,
+      "sha256": "e6372067432e42201937d49bedc713709718db0b4d74633fdd5aa911fed0a46c"
+    }
+  ],
+  "source_zip_sha256": "47302cfd5e912df0eee3c4d6aacdce3babb63bcf2dd15bfd8d989b1f6ed956b9",
+  "registry_self": "Self-hash recorded in the external delivery receipt"
+}

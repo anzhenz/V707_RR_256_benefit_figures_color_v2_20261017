@@ -1,0 +1,34 @@
+{
+  "status": "COMPLETE",
+  "source_run": "/root/autodl-tmp/fx/ECG/runs/V7_0_7_RR_error_analysis_20261015/test27_current_20261015T070332_413151Z",
+  "source_summary_sha256": "1df9a037f52314bec91f132e6ed9f9a2b1490d7ad89535d49ae9ec975c5c6a51",
+  "counts": {
+    "total_direct_fp_removed": 250,
+    "total_fp_to_tp_reassigned": 6,
+    "total_tp_to_fp_reassigned": 0,
+    "total_net_fp_reduction": 256,
+    "model_direct_fp_removed": 227,
+    "model_fp_to_tp_reassigned": 6,
+    "model_tp_to_fp_reassigned": 0,
+    "model_net_fp_reduction": 233,
+    "rr_direct_fp_removed": 23,
+    "rr_fp_to_tp_reassigned": 0,
+    "rr_tp_to_fp_reassigned": 0,
+    "rr_net_fp_reduction": 23,
+    "benefit_cases": 256
+  },
+  "benefit_types": {
+    "RR_FP_REMOVED": 23,
+    "MODEL_FP_REMOVED": 227,
+    "FP_TO_TP_REASSIGNED": 6
+  },
+  "stage_routes": {
+    "RR_FP_REMOVED": 23,
+    "MODEL_FP_REMOVED": 227,
+    "MODEL_MATCH_REASSIGNMENT": 6
+  },
+  "scope": "All baseline FP candidates no longer final FP, distinguishing removal and FP-to-TP reassignment",
+  "real_time_status": "NOT_PASSED; frozen original offline analysis",
+  "gpu_inference_performed": false,
+  "script_sha256": "67a2fcae4bd6ce79a3b1257a0c43a18b44643eed171c01c156ad7fc1b1979df3"
+}
